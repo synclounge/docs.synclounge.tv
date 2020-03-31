@@ -22,6 +22,7 @@ The following can be used to change some of the settings in the application. Arg
 ## Authentication
 
 To enable authentication, the following setting and format is used
+
 ```json
 "authentication": {
     "mechanism": "plex",
@@ -45,6 +46,7 @@ To enable authentication, the following setting and format is used
 ### Customize the Custom Server entry
 
 Adding this to your settings will override the the custom server in the server list.
+
 ```json
 "customServer": {
   "name": "Custom Server 1",
