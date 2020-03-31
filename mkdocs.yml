@@ -36,7 +36,7 @@ markdown_extensions:
   - toc:
       permalink: true
 extra_javascript:
- - 'js/synclounge.js'
+  - 'js/synclounge.js'
 extra_css:
   - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css
   - 'css/synclounge.css'
@@ -53,7 +53,7 @@ extra:
 nav:
   - Docs Home: index.md
   - FAQ:
-      - FAQ: faq.md
+    - FAQ: faq.md
   - Self-Hosting:
     - Getting Started: self-hosted/getting-started.md
     - Running with Docker: self-hosted/docker.md
