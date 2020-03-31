@@ -1,0 +1,72 @@
+
+body {
+  color: white;
+  background: linear-gradient(180deg, #1f1c2c, #182848)
+}
+
+main {
+  background: linear-gradient(180deg, #1f1c2c, #182848);
+}
+
+a {
+  color: #ffc107;
+}
+
+.md-tabs__link:hover, a:hover {
+  color: #ffc107;
+}
+
+.title-page-text {
+  color: #ffc107;
+  font-size: 1.25rem;
+  line-height: 0;
+  letter-spacing: -0.01em;
+  top: -40px;
+  position: relative;
+}
+
+.md-typeset h1, h1,
+.md-typeset h2, h2,
+.md-typeset h3, h3,
+.md-typeset h4, h4,
+.md-typeset h5, h5 {
+  color: #ffc107;
+}
+
+.md-typeset .md-content__button, .md-typeset .md-content__icon {
+  color: #ffc107;
+}
+
+.md-typeset a {
+  color: #ffc107;
+}
+
+.external:after {
+  content: url('../img/open_in_new.svg');
+  text-decoration: inherit;
+  color: #ffc107;
+}
+
+.md-tabs__link--active, .md-nav__item .md-nav__link--active, .md-nav__link--active, .md-nav__link:active {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.md-header-nav__topic {
+  margin-top: 6px;
+}
+
+.md-nav__link[data-md-state=blur] {
+  color: #ffc107;
+}
+
+.md-typeset code, .md-typeset pre, code {
+  background-color: hsla(0,0%,50.5%,.5);
+  box-shadow: 0.29412em 0 0 hsla(0,0%,50.5%,.5), -0.29412em 0 0 hsla(0,0%,50.5%,.5);
+  color: #ffc107;
+}
+
+.md-header-nav__button.md-logo img {
+  height: 36px;
+  width: auto;
+}

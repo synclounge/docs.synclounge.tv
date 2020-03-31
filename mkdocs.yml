@@ -1,0 +1,73 @@
+# Project information
+site_name: "SyncLounge Docs"
+site_description: "Enjoy Plex with your friends. In Sync. Together."
+site_author: "MagicalCodeMonkey"
+site_url: "https://docs.synclounge.tv/"
+
+# Repository
+repo_name: "samcm/synclounge"
+repo_url: "https://github.com/samcm/synclounge"
+edit_uri: "https://github.com/samcm/docs.synclounge.tv/edit/master/docs/"
+
+# Copyright
+copyright: "Copyright &copy; SyncLounge<br />SyncLounge is not affiliated with Plex Inc."
+
+# Configuration
+theme:
+  name: material
+  custom_dir: synclounge/
+  language: "en"
+  palette:
+    primary: "black"
+    accent: "yellow"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  logo: "img/logo-long-light.png"
+  favicon: "img/favicon.ico"
+  features:
+    - tabs
+  plugins:
+    - search
+    - git-revision-date-localized
+  highlightjs: true
+
+markdown_extensions:
+  - toc:
+      permalink: true
+extra_javascript:
+ - 'js/synclounge.js'
+extra_css:
+  - https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css
+  - 'css/synclounge.css'
+extra:
+  social:
+    - image: img/logo-small-light.png
+      link: 'http://app.synclounge.tv/'
+    - icon: fontawesome/brands/discord
+      link: 'https://discord.gg/fKQB3yt'
+    - icon: fontawesome/brands/twitter
+      link: 'https://twitter.com/syncloungetv'
+
+# Navigation
+nav:
+  - Docs Home: index.md
+  - FAQ:
+      - FAQ: faq.md
+  - Self-Hosting:
+    - Getting Started: self-hosted/getting-started.md
+    - Running with Docker: self-hosted/docker.md
+    - Running on Synology NAS: self-hosted/synology.md
+    - Running Locally: self-hosted/locally.md
+    - Using a Reverse Proxy: self-hosted/reverse-proxy.md
+    - Settings: self-hosted/settings.md
+  - Contributing:
+    - Contributing: contributing/contributing.md
+    - Donating: contributing/donating.md
+    - Documetation Guidelines: contributing/documentation-guidelines.md
+    - Developing: contributing/developing.md
+  - App:
+    - App: http://app.synclounge.tv/
+  - Discord:
+    - Discord: https://discord.gg/fKQB3yt
+    - Twitter: https://twitter.com/syncloungetv
