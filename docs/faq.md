@@ -13,9 +13,11 @@ hide_nav_right: true
 
     SyncLounge uses your Plex account to fetch details about your Plex Clients and Media Servers to use within the app. For security concerns, see the 'Security' section below.
 
-- _Can I make someone else the 'host' of a room?_
+- _How do I do X when using SyncLounge?_
 
-    Yes! Double-click their avatar to make them a host.
+    If you are trying to figure out how to do something when *using* SyncLounge, check the [how-to](/how-tos/how-tos/) section of the documentation. This will show you how to change hosts, user Party Pausing, etc.
+
+    If you are trying to figure out how to do something when *running* SyncLounge, check the [how-to](/how-tos/how-tos/) and [Self-hosting](/self-hosted/getting-started/) sections. This will tell you how to setup and configure your servers.
 
 ## Issues
 
