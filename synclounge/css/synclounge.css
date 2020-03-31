@@ -8,14 +8,6 @@ main {
   background: linear-gradient(180deg, #1f1c2c, #182848);
 }
 
-a {
-  color: #ffc107;
-}
-
-.md-tabs__link:hover, a:hover {
-  color: #ffc107;
-}
-
 .title-page-text {
   color: #ffc107;
   font-size: 1.25rem;
@@ -23,6 +15,15 @@ a {
   letter-spacing: -0.01em;
   top: -40px;
   position: relative;
+}
+
+/* Fix colors for text, links, etc. */
+a {
+  color: #ffc107;
+}
+
+.md-tabs__link:hover, a:hover {
+  color: #ffc107;
 }
 
 .md-typeset h1, h1,
@@ -33,7 +34,8 @@ a {
   color: #ffc107;
 }
 
-.md-typeset .md-content__button, .md-typeset .md-content__icon {
+.md-typeset .md-content__button,
+.md-typeset .md-content__icon {
   color: #ffc107;
 }
 
@@ -47,26 +49,49 @@ a {
   color: #ffc107;
 }
 
-.md-tabs__link--active, .md-nav__item .md-nav__link--active, .md-nav__link--active, .md-nav__link:active {
+/* Fix nav link color colors */
+.md-nav__item .md-nav__link--active,
+.md-tabs__link--active,
+.md-nav__link--active,
+.md-nav__link:active,
+.md-nav--primary .md-nav__item--active>.md-nav__link {
   color: #ffc107;
   font-weight: bold;
 }
 
-.md-header-nav__topic {
-  margin-top: 6px;
-}
-
+/* Fix nav link color colors */
 .md-nav__link[data-md-state=blur] {
   color: #ffc107;
 }
 
+/* Fix code block colors */
 .md-typeset code, .md-typeset pre, code {
   background-color: hsla(0,0%,50.5%,.5);
   box-shadow: 0.29412em 0 0 hsla(0,0%,50.5%,.5), -0.29412em 0 0 hsla(0,0%,50.5%,.5);
   color: #ffc107;
 }
 
-.md-header-nav__button.md-logo img {
+/* Fix nav title position */
+.md-header-nav__topic {
+  margin-top: 6px;
+}
+
+/* Fix logo sizing */
+.md-header-nav__button.md-logo img,
+/* Fix mobile navigation logo */
+.md-nav__title .md-nav__button.md-logo img {
   height: 36px;
   width: auto;
+}
+
+/* Fix mobile stylinf */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title,
+  .md-nav--primary .md-nav__title~.md-nav__list {
+    background-color: black;
+    color: white;
+  }
+  .md-nav {
+    background-color: transparent;
+  }
 }
