@@ -1,0 +1,48 @@
+hide_nav: true
+
+# <!-- Home -->
+
+<div class="container text-white">
+  <div class="row">
+    <div class="col align-self-center text-center">
+      <a href='https://synclounge.tv/'>
+        <img src='img/logo-long-light.png' />
+      </a>
+      <h2 class="">Enjoy Plex with your friends. In Sync. Together.</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1 class="text-warning">What is SyncLounge?</h2>
+      <p>
+        SyncLounge is a third party tool that allows you to watch Plex in sync with your friends/family, wherever you are.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <h3 class="text-warning">How does it work?</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <ol style='font-size: 1.2em;'>
+        <li>Log in to your Plex.tv account</li>
+        <li>Select your player (Plex Media Player, Apple TV, Nvidia Shield etc.)</li>
+        <li>Join a SyncLounge Room, or create your own</li>
+        <li>Give your friends/family your Room details</li>
+        <li>Enjoy your media, fully synchronised</li>
+      </ol>
+    </div>
+    <div class="col-md-6">
+      <img src='img/flow_v2.png' style='max-height: 335px;' >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col align-self-center text-center">
+      <a href='http://app.synclounge.tv/'>
+        <h3 class="text-warning">Try it out yourself on our hosted servers!</h4>
+      </a>
+    </div>
+  </div>
+</div>
