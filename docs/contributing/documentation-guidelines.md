@@ -15,7 +15,9 @@ Highlights:
 - Headings, lists, and code blocks (possibly more) should be surrounded by blank lines.
 - Images should have alternate text (alt text).
 - Files should end with a blank line.
-- Disabled rules:
-  - Line length
-  - No Inline HTML
-  - First line in file should be a top level heading
+
+Disabled rules:
+
+- Line length
+- No Inline HTML
+- First line in file should be a top level heading
