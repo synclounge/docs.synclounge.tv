@@ -54,6 +54,10 @@ nav:
   - Docs Home: index.md
   - FAQ:
       - FAQ: faq.md
+  - How-tos:
+      - How-to Home: how-tos/how-tos.md
+      - Change the Host: how-tos/change-host.md
+      - Party Pausing: how-tos/party-pausing.md
   - Self-Hosting:
       - Getting Started: self-hosted/getting-started.md
       - Running with Docker: self-hosted/docker.md

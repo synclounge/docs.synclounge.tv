@@ -1,7 +1,12 @@
 
 # Documentation Guidelines
 
-Almost all of the pages in this documentation are written in markdown and conform to the rules of markdownlint. If you contribute to the documentation, make sure that your edits pass linting which will automatically occur once you submit you changes.
+Almost all of the pages in this documentation are written in markdown and conform to the [rules of markdownlint](https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md). If you contribute to the documentation, make sure that your edits pass linting which will automatically occur once you submit you changes.
+
+When creating documentation, please try to do the following:
+
+- Follow logical groupings for sections and pages. E.g. - All documentation for How-tos is under `docs/how-tos/`
+- Place images in the `docs/img/` following the same logical groupings as above. E.g. - All images for How-tos are under `docs/img/how-tos`
 
 If you run into any linting issues, you may find a full list of linting rules, and examples, in the [markdownlint repository](https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md)
 
