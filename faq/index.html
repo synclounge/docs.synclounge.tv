@@ -745,41 +745,61 @@
                 <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>Do I have to have a Plex account to use SyncLounge?</em></li>
-<li>Yes.</li>
-<li><em>Why do I have to log in with my Plex account?</em></li>
-<li>SyncLounge uses your Plex account to fetch details about your Plex Clients and Media Servers to use within the app. For security concerns, see the 'Security' section below.</li>
-<li><em>Can I make someone else the 'host' of a room?</em></li>
-<li>Yes! Double-click their avatar to make them a host.</li>
+<li>
+<p><em>Do I have to have a Plex account to use SyncLounge?</em></p>
+<p>Yes.</p>
+</li>
+<li>
+<p><em>Why do I have to log in with my Plex account?</em></p>
+<p>SyncLounge uses your Plex account to fetch details about your Plex Clients and Media Servers to use within the app. For security concerns, see the 'Security' section below.</p>
+</li>
+<li>
+<p><em>Can I make someone else the 'host' of a room?</em></p>
+<p>Yes! Double-click their avatar to make them a host.</p>
+</li>
 </ul>
 <h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>I can't log in to SyncLounge</em></li>
-<li>This is most likely due to Popup Blocking. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site.</li>
-<li><em>When trying to connect, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled.</em></li>
-<li>This indicates that SyncLounge was unable to connect to the server properly. Here are known reasons why the connection may be blocked or not work properly:<ul>
+<li>
+<p><em>I can't log in to SyncLounge</em></p>
+<p>This is most likely due to Popup Blocking. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site.</p>
+</li>
+<li>
+<p><em>When trying to connect, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled.</em></p>
+<p>This indicates that SyncLounge was unable to connect to the server properly. Here are known reasons why the connection may be blocked or not work properly:</p>
+<ul>
 <li>An adblocker, firewall, network configuration, ISP, or some other software on your computer is blocking the connection.</li>
 <li>The server owner's firewall, network configuration, ISP, or some other software is blocking the connection.</li>
 <li>Remote access is not enabled on the server or it isn't working properly.</li>
 </ul>
 </li>
-<li><em>Client X isn't working!</em></li>
-<li>If you use the Plex Desktop app, you may encounter issues. Try the original <a href="https://forums.plex.tv/t/plex-media-player/120475/100">Plex Media Player application</a> for Windows and MacOS. Scroll down to the newest to download.</li>
-<li>If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the <a href="http://app.synclounge.tv/">hosted Synclounge does</a> then try that to see if it will work.</li>
-<li>If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.</li>
-<li>SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly.</li>
-<li><em>Someone in my room is getting "the quota has been exceeded" error</em></li>
-<li>Lower the bitrate (aka streaming quality) on the client.</li>
+<li>
+<p><em>Client X isn't working!</em></p>
+<p>If you use the Plex Desktop app, you may encounter issues. Try the original <a href="https://forums.plex.tv/t/plex-media-player/120475/100">Plex Media Player application</a> for Windows and MacOS. Scroll down to the newest to download.</p>
+<p>If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the <a href="http://app.synclounge.tv/">hosted Synclounge does</a> then try that to see if it will work.</p>
+<p>If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.</p>
+<p>SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly.</p>
+</li>
+<li>
+<p><em>Someone in my room is getting "the quota has been exceeded" error</em></p>
+<p>Lower the bitrate (aka streaming quality) on the client.</p>
+</li>
 </ul>
 <p>If any of the above don't answer your question or address your issue, check the <a href="https://github.com/samcm/synclounge/issues">Issue Tracker</a> and <a href="https://discord.gg/fKQB3yt">Discord</a> to see if your issue has been reported already. If not, let us know!</p>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>Won't you have access to my username, password?</em></li>
-<li>No. SyncLounge uses Plex's OAuth to log in, so your username and password are never seen by SyncLounge.</li>
-<li><em>Won't you have access to my Plex Account?</em></li>
-<li>All details provided by Plex are stored client side (in your browser). Absolutely none of your <strong>confidential</strong> data is sent to our server. You can verify this by inspecting the Network tab within Chrome developer tools. If you would like, you can <a href="/self-hosted/getting-started/">host SyncLounge yourself</a>.</li>
-<li><em>What is sent then?</em></li>
-<li>When you've connected to a SyncLounge room, a few details are sent back and forth to the SyncLounge Server to enable syncing. The data sent contains the following:<ul>
+<li>
+<p><em>Won't you have access to my username, password?</em></p>
+<p>No. SyncLounge uses Plex's OAuth to log in, so your username and password are never seen by SyncLounge.</p>
+</li>
+<li>
+<p><em>Won't you have access to my Plex Account?</em></p>
+<p>All details provided by Plex are stored client side (in your browser). Absolutely none of your <strong>confidential</strong> data is sent to our server. You can verify this by inspecting the Network tab within Chrome developer tools. If you would like, you can <a href="/self-hosted/getting-started/">host SyncLounge yourself</a>.</p>
+</li>
+<li>
+<p><em>What is sent then?</em></p>
+<p>When you've connected to a SyncLounge room, a few details are sent back and forth to the SyncLounge Server to enable syncing. The data sent contains the following:</p>
+<ul>
 <li>Plex Username</li>
 <li>Plex User Thumbnail URL</li>
 <li>Content playing title (Eg. Lord of the Rings: The Fellowship of the Ring)</li>
@@ -789,13 +809,17 @@
 <li>Host machineIdentifier</li>
 <li>Playerstate (Eg. paused, stopped, playing)</li>
 <li>Client response time (Ping time between you and your Plex Client)</li>
+<li>SL Server address, SL Server Room and SL Server Room Password are sent to the WebApp when you join a room to create shortened invite links.</li>
 </ul>
 </li>
-<li>SL Server address, SL Server Room and SL Server Room Password are sent to the WebApp when you join a room to create shortened invite links.</li>
-<li><em>What about the public server provided by SyncLounge? Is my data safe?</em></li>
-<li>As noted above, SyncLounge gets none of your <strong>confidential</strong> data and we log absolutely nothing to disk. Data is kept within the room instance until you leave or the server restarts. We have enabled SSL on our public servers but if privacy is a concern for you we strongly suggest <a href="/self-hosted/getting-started/">running your own server</a>.</li>
-<li><em>Speaking of SSL, why isn't the site served over HTTPS?</em></li>
-<li>By default SyncLounge is served via HTTP. While we do offer HTTPS, doing so forces modern browsers in to blocking all HTTP connections. This effectively stops all communication with some Plex Clients that only operate using HTTP.</li>
+<li>
+<p><em>What about the public server provided by SyncLounge? Is my data safe?</em></p>
+<p>As noted above, SyncLounge gets none of your <strong>confidential</strong> data and we log absolutely nothing to disk. Data is kept within the room instance until you leave or the server restarts. We have enabled SSL on our public servers but if privacy is a concern for you we strongly suggest <a href="/self-hosted/getting-started/">running your own server</a>.</p>
+</li>
+<li>
+<p><em>Speaking of SSL, why isn't the site served over HTTPS?</em></p>
+<p>By default SyncLounge is served via HTTP. While we do offer HTTPS, doing so forces modern browsers in to blocking all HTTP connections. This effectively stops all communication with some Plex Clients that only operate using HTTP.</p>
+</li>
 </ul>
                 
                   
