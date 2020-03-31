@@ -16,6 +16,6 @@ Highlights:
 - Images should have alternate text (alt text).
 - Files should end with a blank line.
 - Disabled rules:
-    - Line length
-    - No Inline HTML
-    - First line in file should be a top level heading
+  - Line length
+  - No Inline HTML
+  - First line in file should be a top level heading

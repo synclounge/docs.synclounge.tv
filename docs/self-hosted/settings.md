@@ -54,7 +54,7 @@ Adding this to your settings will override the the custom server in the server l
 }
 ```
 
-![image](https://user-images.githubusercontent.com/1524443/76433720-19a3f180-638b-11ea-8c20-1997728e8325.png)
+![Custom Server Example](https://user-images.githubusercontent.com/1524443/76433720-19a3f180-638b-11ea-8c20-1997728e8325.png)
 
 ### Customize servers list
 
@@ -86,4 +86,4 @@ The servers list can be modified with your own list of servers. If this setting 
 ]
 ```
 
-![image](https://user-images.githubusercontent.com/1524443/76433958-6daed600-638b-11ea-9cf6-41ea79182dbc.png)
+![Custom Server List Example](https://user-images.githubusercontent.com/1524443/76433958-6daed600-638b-11ea-9cf6-41ea79182dbc.png)
