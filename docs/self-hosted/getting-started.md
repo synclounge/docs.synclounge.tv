@@ -1,11 +1,10 @@
 
-# <!-- Self-hosting / --> Getting Started
+# Getting Started
 
 ## Prerequisites
 
 1. An understanding of, or willingness to learn, some basic tech stuff
 1. A computer to run these applications
-
 
 However you decide to run SyncLounge yourself, to run the webapp you need to set the Access URL using one of these methods:
 
