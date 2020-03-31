@@ -10,20 +10,22 @@ The following tags are available:
 * nginx: latest + nginx reverse proxy
 
 To use the latest
+
 ```
 docker run \
   --name=synclounge \
-	-p 8088:8088 \
-	-p 8089:8089 \
-	-e DOMAIN=example.com \
+  -p 8088:8088 \
+  -p 8089:8089 \
+  -e DOMAIN=example.com \
   starbix/synclounge
 ```
 
 To use a tagged version:
+
 ```
 docker run \
   --name=plextogether_nginx \
-	-p 80:80 \
-	-e DOMAIN=example.com \
+  -p 80:80 \
+  -e DOMAIN=example.com \
   starbix/synclounge:TAG
 ```
