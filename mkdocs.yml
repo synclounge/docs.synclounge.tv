@@ -7,7 +7,7 @@ site_url: "https://docs.synclounge.tv/"
 # Repository
 repo_name: "samcm/synclounge"
 repo_url: "https://github.com/samcm/synclounge"
-edit_uri: "https://github.com/samcm/docs.synclounge.tv/edit/master/docs/"
+edit_uri: "https://github.com/MagicalCodeMonkey/docs.synclounge.tv/edit/master/docs/"
 
 # Copyright
 copyright: "Copyright &copy; SyncLounge<br />SyncLounge is not affiliated with Plex Inc."
