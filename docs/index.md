@@ -15,6 +15,8 @@ hide_nav: true
     </div>
   </div>
   <div class="row">
+  </div>
+  <div class="row">
     <div class="col">
       In the top navigation you will find useful links.<br />
       <br />
