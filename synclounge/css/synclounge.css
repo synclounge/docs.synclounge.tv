@@ -84,6 +84,10 @@ a {
   width: auto;
 }
 
+.md-typeset table:not([class]) {
+  background: transparent;
+}
+
 /* Fix mobile stylinf */
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title,
