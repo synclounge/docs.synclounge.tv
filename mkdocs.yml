@@ -53,21 +53,21 @@ extra:
 nav:
   - Docs Home: index.md
   - FAQ:
-    - FAQ: faq.md
+      - FAQ: faq.md
   - Self-Hosting:
-    - Getting Started: self-hosted/getting-started.md
-    - Running with Docker: self-hosted/docker.md
-    - Running on Synology NAS: self-hosted/synology.md
-    - Running Locally: self-hosted/locally.md
-    - Using a Reverse Proxy: self-hosted/reverse-proxy.md
-    - Settings: self-hosted/settings.md
+      - Getting Started: self-hosted/getting-started.md
+      - Running with Docker: self-hosted/docker.md
+      - Running on Synology NAS: self-hosted/synology.md
+      - Running Locally: self-hosted/locally.md
+      - Using a Reverse Proxy: self-hosted/reverse-proxy.md
+      - Settings: self-hosted/settings.md
   - Contributing:
-    - Contributing: contributing/contributing.md
-    - Donating: contributing/donating.md
-    - Documetation Guidelines: contributing/documentation-guidelines.md
-    - Developing: contributing/developing.md
+      - Contributing: contributing/contributing.md
+      - Donating: contributing/donating.md
+      - Documetation Guidelines: contributing/documentation-guidelines.md
+      - Developing: contributing/developing.md
   - App:
-    - App: http://app.synclounge.tv/
+      - App: http://app.synclounge.tv/
   - Discord:
-    - Discord: https://discord.gg/fKQB3yt
-    - Twitter: https://twitter.com/syncloungetv
+      - Discord: https://discord.gg/fKQB3yt
+      - Twitter: https://twitter.com/syncloungetv
