@@ -11,15 +11,15 @@
 1. Change to the directory: `cd synclounge`
 1. Install packages and dependencies: `npm install`
 
-# Running the webapp:
+### Running the webapp
 
 1. Build the webapp: `npm run build`
-  * Note: This must be done anytime you change the `webroot` setting
+   - Note: This must be done anytime you change the `webroot` setting
 1. Run the webapp using `node webapp.js`
-  * Don't forget that you need to set Access URL as described in [Getting Started](/self-hosted/getting-started/).
-  * The SL web app will be running at http://ip:8088/ or http://ip:8088/`webroot_setting` if you set `webroot`.
+   - Don't forget that you need to set Access URL as described in [Getting Started](/self-hosted/getting-started/).
+   - The SL web app will be running at `http://ip:8088/` or `http://ip:8088/WEBROOT` if you set `webroot`.
 
-### Running the server:
+### Running the server
 
 - Run the server using `npm run server`
-  * The SL server will be running at http://ip:8089/slserver.
+  - The SL server will be running at `http://ip:8089/slserver`.
