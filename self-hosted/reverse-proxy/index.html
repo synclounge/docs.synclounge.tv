@@ -600,19 +600,52 @@
     Apache
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subdomain" class="md-nav__link">
-    Subdomain
+    <nav class="md-nav" aria-label="Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache-subdomain" class="md-nav__link">
+    Apache Subdomain
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-subfolder" class="md-nav__link">
+    Apache Subfolder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#subfolder" class="md-nav__link">
-    Subfolder
+  <a href="#caddy" class="md-nav__link">
+    Caddy
   </a>
+  
+    <nav class="md-nav" aria-label="Caddy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caddy-subdomain" class="md-nav__link">
+    Caddy Subdomain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caddy-subfolder" class="md-nav__link">
+    Caddy Subfolder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -851,19 +884,52 @@
     Apache
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#subdomain" class="md-nav__link">
-    Subdomain
+    <nav class="md-nav" aria-label="Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache-subdomain" class="md-nav__link">
+    Apache Subdomain
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-subfolder" class="md-nav__link">
+    Apache Subfolder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#subfolder" class="md-nav__link">
-    Subfolder
+  <a href="#caddy" class="md-nav__link">
+    Caddy
   </a>
+  
+    <nav class="md-nav" aria-label="Caddy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caddy-subdomain" class="md-nav__link">
+    Caddy Subdomain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caddy-subfolder" class="md-nav__link">
+    Caddy Subfolder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -902,7 +968,7 @@ There are many different options such as nginx, haproxy, traefik, etc.</p>
 </ul>
 <h2 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h2>
 <p>Users have had luck with the following:</p>
-<h2 id="subdomain">Subdomain<a class="headerlink" href="#subdomain" title="Permanent link">&para;</a></h2>
+<h3 id="apache-subdomain">Apache Subdomain<a class="headerlink" href="#apache-subdomain" title="Permanent link">&para;</a></h3>
 <pre><code class="conf">#SyncLounge Server
 ProxyPass /slserver/socket.io http://&lt;IP&gt;:8089/slserver/socket.io/
 
@@ -914,7 +980,41 @@ ProxyPass / http://&lt;IP&gt;:8088/
 ProxyPassReverse / http://&lt;IP&gt;:8088/
 </code></pre>
 
-<h2 id="subfolder">Subfolder<a class="headerlink" href="#subfolder" title="Permanent link">&para;</a></h2>
+<h3 id="apache-subfolder">Apache Subfolder<a class="headerlink" href="#apache-subfolder" title="Permanent link">&para;</a></h3>
+<p>If you have a working subfolder created, please contribute!</p>
+<h2 id="caddy">Caddy<a class="headerlink" href="#caddy" title="Permanent link">&para;</a></h2>
+<h3 id="caddy-subdomain">Caddy Subdomain<a class="headerlink" href="#caddy-subdomain" title="Permanent link">&para;</a></h3>
+<p>This was provided by <a href="https://github.com/LostSoulfly">LostSoulfly</a> in this <a href="https://github.com/samcm/synclounge/issues/174#issuecomment-609360096">comment</a>.</p>
+<pre><code class="conf">&lt;SUBDOMAIN.DOMAIN.TLD&gt; {
+    gzip
+    log logs/slserver.access.log
+
+    proxy / &lt;IP&gt;:8089 {
+        except /socket.io
+        except /slserver
+        websocket
+        transparent
+    }
+
+    proxy /slserver &lt;IP&gt;:8089 {
+        header_upstream Host {host}
+        header_upstream X-Real-IP {remote}
+        header_upstream X-Forwarded-For {remote}
+        websocket
+        transparent
+    }
+
+    proxy /socket.io &lt;IP&gt;:8089/slserver/socket.io/ {
+        header_upstream Host {host}
+        header_upstream X-Real-IP {remote}
+        header_upstream X-Forwarded-For {remote}
+        websocket
+        transparent
+    }
+}
+</code></pre>
+
+<h3 id="caddy-subfolder">Caddy Subfolder<a class="headerlink" href="#caddy-subfolder" title="Permanent link">&para;</a></h3>
 <p>If you have a working subfolder created, please contribute!</p>
                 
               
