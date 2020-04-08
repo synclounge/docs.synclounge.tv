@@ -25,7 +25,7 @@ hide_nav_right: true
 
     This is most likely due to Popup Blocking. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site.
 
-- _When trying to connect, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled._
+- _When trying to connect to my server, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled._
 
     This indicates that SyncLounge was unable to connect to the server properly. Here are known reasons why the connection may be blocked or not work properly:
 
@@ -35,13 +35,14 @@ hide_nav_right: true
 
 - _Client X isn't working!_
 
-    If you use the Plex Desktop app, you may encounter issues. Try the original [Plex Media Player application](https://forums.plex.tv/t/plex-media-player/120475/100) for Windows and MacOS. Scroll down to the newest to download.
+    SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly. Here are some known issues and solutions, where possible:
 
-    If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the [hosted Synclounge does](http://app.synclounge.tv/) then try that to see if it will work.
-
-    If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.
-
-    SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly.
+      - If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the [hosted Synclounge does](http://app.synclounge.tv/) then try that to see if it will work.
+      - **Plex Desktop app**: You may encounter issues using this. Try the original [Plex Media Player application](https://forums.plex.tv/t/plex-media-player/120475/100) for Windows and MacOS. Scroll down to the newest to download.
+      - **New Plex Player**: If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.
+      - **Android based players**: These players can't remote start media properly.
+      - **AppleTV**: Make sure that it is open before trying to connect.
+      - **SmartTV**: Plex apps on SmartTVs don't work.
 
 - _Someone in my room is getting "the quota has been exceeded" error_
 
