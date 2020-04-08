@@ -20,7 +20,7 @@ If you aren't using [LSIO's Let's Encrypt container](https://hub.docker.com/r/li
 
 Users have had luck with the following:
 
-## Subdomain
+### Apache Subdomain
 
 ```conf
 #SyncLounge Server
@@ -34,6 +34,46 @@ ProxyPass / http://<IP>:8088/
 ProxyPassReverse / http://<IP>:8088/
 ```
 
-## Subfolder
+### Apache Subfolder
+
+If you have a working subfolder created, please contribute!
+
+## Caddy
+
+### Caddy Subdomain
+
+This was provided by [LostSoulfly](https://github.com/LostSoulfly) in this [comment](https://github.com/samcm/synclounge/issues/174#issuecomment-609360096).
+
+```conf
+<SUBDOMAIN.DOMAIN.TLD> {
+    gzip
+    log logs/slserver.access.log
+
+    proxy / <IP>:8089 {
+        except /socket.io
+        except /slserver
+        websocket
+        transparent
+    }
+
+    proxy /slserver <IP>:8089 {
+        header_upstream Host {host}
+        header_upstream X-Real-IP {remote}
+        header_upstream X-Forwarded-For {remote}
+        websocket
+        transparent
+    }
+
+    proxy /socket.io <IP>:8089/slserver/socket.io/ {
+        header_upstream Host {host}
+        header_upstream X-Real-IP {remote}
+        header_upstream X-Forwarded-For {remote}
+        websocket
+        transparent
+    }
+}
+```
+
+### Caddy Subfolder
 
 If you have a working subfolder created, please contribute!
