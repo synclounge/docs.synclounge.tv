@@ -455,8 +455,33 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Using the App
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Using the App" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Using the App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../how-tos/change-host/" title="Change the Host" class="md-nav__link">
+    <a href="../how-tos/app/change-host/" title="Change the Host" class="md-nav__link">
       Change the Host
     </a>
   </li>
@@ -468,8 +493,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../how-tos/party-pausing/" title="Party Pausing" class="md-nav__link">
+    <a href="../how-tos/app/party-pausing/" title="Party Pausing" class="md-nav__link">
       Party Pausing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../self-hosted/getting-started/" title="Self-hosting" class="md-nav__link">
+      Self-hosting
     </a>
   </li>
 
@@ -534,6 +576,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../self-hosted/locally/" title="Running Locally" class="md-nav__link">
+      Running Locally
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../self-hosted/synology/" title="Running on Synology NAS" class="md-nav__link">
       Running on Synology NAS
     </a>
@@ -546,8 +600,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../self-hosted/locally/" title="Running Locally" class="md-nav__link">
-      Running Locally
+    <a href="../self-hosted/linux/" title="Running on Linux" class="md-nav__link">
+      Running on Linux
     </a>
   </li>
 
@@ -845,7 +899,7 @@
 <p>This is most likely due to Popup Blocking. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site.</p>
 </li>
 <li>
-<p><em>When trying to connect, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled.</em></p>
+<p><em>When trying to connect to my server, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled.</em></p>
 <p>This indicates that SyncLounge was unable to connect to the server properly. Here are known reasons why the connection may be blocked or not work properly:</p>
 <ul>
 <li>An adblocker, firewall, network configuration, ISP, or some other software on your computer is blocking the connection.</li>
@@ -855,10 +909,15 @@
 </li>
 <li>
 <p><em>Client X isn't working!</em></p>
-<p>If you use the Plex Desktop app, you may encounter issues. Try the original <a href="https://forums.plex.tv/t/plex-media-player/120475/100">Plex Media Player application</a> for Windows and MacOS. Scroll down to the newest to download.</p>
-<p>If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the <a href="http://app.synclounge.tv/">hosted Synclounge does</a> then try that to see if it will work.</p>
-<p>If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.</p>
-<p>SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly.</p>
+<p>SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly. Here are some known issues and solutions, where possible:</p>
+<ul>
+<li>If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the <a href="http://app.synclounge.tv/">hosted Synclounge does</a> then try that to see if it will work.</li>
+<li><strong>Plex Desktop app</strong>: You may encounter issues using this. Try the original <a href="https://forums.plex.tv/t/plex-media-player/120475/100">Plex Media Player application</a> for Windows and MacOS. Scroll down to the newest to download.</li>
+<li><strong>New Plex Player</strong>: If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.</li>
+<li><strong>Android based players</strong>: These players can't remote start media properly.</li>
+<li><strong>AppleTV</strong>: Make sure that it is open before trying to connect.</li>
+<li><strong>SmartTV</strong>: Plex apps on SmartTVs don't work.</li>
+</ul>
 </li>
 <li>
 <p><em>Someone in my room is getting "the quota has been exceeded" error</em></p>

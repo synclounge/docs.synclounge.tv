@@ -395,8 +395,33 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Using the App
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Using the App" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Using the App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../how-tos/change-host/" title="Change the Host" class="md-nav__link">
+    <a href="../../how-tos/app/change-host/" title="Change the Host" class="md-nav__link">
       Change the Host
     </a>
   </li>
@@ -408,8 +433,25 @@
 
 
   <li class="md-nav__item">
-    <a href="../../how-tos/party-pausing/" title="Party Pausing" class="md-nav__link">
+    <a href="../../how-tos/app/party-pausing/" title="Party Pausing" class="md-nav__link">
       Party Pausing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="Self-hosting" class="md-nav__link">
+      Self-hosting
     </a>
   </li>
 
@@ -476,6 +518,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../locally/" title="Running Locally" class="md-nav__link">
+      Running Locally
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../synology/" title="Running on Synology NAS" class="md-nav__link">
       Running on Synology NAS
     </a>
@@ -488,8 +542,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../locally/" title="Running Locally" class="md-nav__link">
-      Running Locally
+    <a href="../linux/" title="Running on Linux" class="md-nav__link">
+      Running on Linux
     </a>
   </li>
 
@@ -537,6 +591,27 @@
         <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
     Nginx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    Apache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subdomain" class="md-nav__link">
+    Subdomain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subfolder" class="md-nav__link">
+    Subfolder
   </a>
   
 </li>
@@ -771,6 +846,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    Apache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subdomain" class="md-nav__link">
+    Subdomain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subfolder" class="md-nav__link">
+    Subfolder
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -797,6 +893,29 @@ There are many different options such as nginx, haproxy, traefik, etc.</p>
 <h2 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
 <p>If you are using the <a href="https://hub.docker.com/r/linuxserver/letsencrypt">Let's Encrypt container by LinuxServer.io (LSIO)</a>, you can use the provided configs found in <a href="https://github.com/linuxserver/reverse-proxy-confs">LSIO's reverse proxy repo</a>.</p>
 <p>If you aren't using <a href="https://hub.docker.com/r/linuxserver/letsencrypt">LSIO's Let's Encrypt container</a>, the configurations found in <a href="https://github.com/linuxserver/reverse-proxy-confs">LSIO's reverse proxy repo</a> for <a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subdomain.conf.sample">subdomain</a> and <a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subfolder.conf.sample">subfolder</a> configurations will still be helpful.</p>
+<p><strong>NOTES:</strong></p>
+<ul>
+<li>The subdomain conf assumes that you are running the webapp with the default webroot (<code>/</code>) and server with default serverroot (<code>/slserver</code>).</li>
+<li>The subfolder conf assumes that you are running the webapp with the webroot set to <code>/slweb</code> and server with default serverroot (<code>/slserver</code>).</li>
+<li>Both assume that you are using the container name <code>synclounge</code> and default ports.</li>
+<li>If you have changed any of the above, you will need to change the conf file you are using</li>
+</ul>
+<h2 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h2>
+<p>Users have had luck with the following:</p>
+<h2 id="subdomain">Subdomain<a class="headerlink" href="#subdomain" title="Permanent link">&para;</a></h2>
+<pre><code class="conf">#SyncLounge Server
+ProxyPass /slserver/socket.io http://&lt;IP&gt;:8089/slserver/socket.io/
+
+ProxyPass /slserver http://&lt;IP&gt;:8089/slserver/
+ProxyPassReverse /slserver http://&lt;IP&gt;:8089/slserver/
+
+# SyncLounge Web
+ProxyPass / http://&lt;IP&gt;:8088/
+ProxyPassReverse / http://&lt;IP&gt;:8088/
+</code></pre>
+
+<h2 id="subfolder">Subfolder<a class="headerlink" href="#subfolder" title="Permanent link">&para;</a></h2>
+<p>If you have a working subfolder created, please contribute!</p>
                 
               
               
@@ -815,7 +934,7 @@ There are many different options such as nginx, haproxy, traefik, etc.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../locally/" title="Running Locally" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../linux/" title="Running on Linux" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -827,7 +946,7 @@ There are many different options such as nginx, haproxy, traefik, etc.</p>
                 
                   
                 
-                Running Locally
+                Running on Linux
               </div>
             </div>
           </a>

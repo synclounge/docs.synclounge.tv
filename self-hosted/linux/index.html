@@ -11,7 +11,7 @@
         <meta name="description" content="Enjoy Plex with your friends. In Sync. Together.">
       
       
-        <link rel="canonical" href="https://docs.synclounge.tv/self-hosted/locally/">
+        <link rel="canonical" href="https://docs.synclounge.tv/self-hosted/linux/">
       
       
         <meta name="author" content="MagicalCodeMonkey">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Running Locally - SyncLounge Docs</title>
+        <title>Running on Linux - SyncLounge Docs</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#running-locally" class="md-skip">
+        <a href="#server-pre-reqs" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
                 
               
               
-                Running Locally
+                Running on Linux
               
             </span>
           </div>
@@ -516,80 +516,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Running Locally
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Running Locally" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../locally/" title="Running Locally" class="md-nav__link">
       Running Locally
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#first-steps" class="md-nav__link">
-    First steps
-  </a>
-  
-    <nav class="md-nav" aria-label="First steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#running-the-webapp" class="md-nav__link">
-    Running the webapp
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-server" class="md-nav__link">
-    Running the server
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -609,11 +540,124 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../linux/" title="Running on Linux" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Running on Linux
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Running on Linux" class="md-nav__link md-nav__link--active">
       Running on Linux
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-pre-reqs" class="md-nav__link">
+    Server Pre-Reqs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-synclounge-code-directory" class="md-nav__link">
+    Setting up SyncLounge Code Directory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settingsjson-file" class="md-nav__link">
+    settings.json file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-synclounge-web-files" class="md-nav__link">
+    Build SyncLounge web files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-synclounge" class="md-nav__link">
+    Run SyncLounge
+  </a>
+  
+    <nav class="md-nav" aria-label="Run SyncLounge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-test" class="md-nav__link">
+    To Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-server-setup" class="md-nav__link">
+    Web Server Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Server Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    NGINX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-production-serious-business-plex-watching" class="md-nav__link">
+    For "Production" (Serious Business Plex Watching)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-all-folks" class="md-nav__link">
+    That's all folks
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -834,8 +878,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -846,36 +888,84 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
+  <a href="#server-pre-reqs" class="md-nav__link">
+    Server Pre-Reqs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-steps" class="md-nav__link">
-    First steps
-  </a>
-  
-    <nav class="md-nav" aria-label="First steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#running-the-webapp" class="md-nav__link">
-    Running the webapp
+  <a href="#setting-up-synclounge-code-directory" class="md-nav__link">
+    Setting up SyncLounge Code Directory
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#settingsjson-file" class="md-nav__link">
+    settings.json file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-synclounge-web-files" class="md-nav__link">
+    Build SyncLounge web files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-synclounge" class="md-nav__link">
+    Run SyncLounge
+  </a>
+  
+    <nav class="md-nav" aria-label="Run SyncLounge">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#running-the-server" class="md-nav__link">
-    Running the server
+  <a href="#to-test" class="md-nav__link">
+    To Test
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-server-setup" class="md-nav__link">
+    Web Server Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Server Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    NGINX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-production-serious-business-plex-watching" class="md-nav__link">
+    For "Production" (Serious Business Plex Watching)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-all-folks" class="md-nav__link">
+    That's all folks
+  </a>
   
 </li>
       
@@ -891,7 +981,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/MagicalCodeMonkey/docs.synclounge.tv/edit/master/docs/self-hosted/locally.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/MagicalCodeMonkey/docs.synclounge.tv/edit/master/docs/self-hosted/linux.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -899,36 +989,178 @@
                   
                 
                 
-                <h1 id="running-locally">Running Locally<a class="headerlink" href="#running-locally" title="Permanent link">&para;</a></h1>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+                  <h1>Running on Linux</h1>
+                
+                <p><a href="https://gist.github.com/joecot">joecot</a> made this awesome how-to for linux!
+The original gist can be found <a href="https://gist.github.com/joecot/2b6fb52f72ca8022cacc4543fe1bed1b">here</a></p>
+<hr />
+<p>This is a quick howto for <a href="/self-hosted/getting-started/">self-hosting</a> SyncLounge, a useful tool for hosting watch parties for your Plex server, on Linux natively.</p>
+<p>If you just want to host a plex party, you can use the public <a href="http://app.synclounge.tv/">app.synclounge.tv</a> servers.</p>
+<p>If you want to use Docker instead of mucking about with Node, see <a href="/self-hosted/docker/">Running with Docker</a>.</p>
+<p>This is for running the NodeJS yourself.</p>
+<p>You don't need programming experience to set SyncLounge up, but without a passable experience configuring linux, you're probably better off using synclounge.tv instead.</p>
+<h2 id="server-pre-reqs">Server Pre-Reqs<a class="headerlink" href="#server-pre-reqs" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Node v8.4.0+</li>
+<li><strong>Linux</strong>: These docs assume a debian/ubuntu distro, but it should be easy enough to install packages on the distro of your choice. nodejs should run on Windows, and feel free to write a different guide for that.</li>
+<li><strong>A domain</strong> pointed at your server in DNS. Here I'll be using synclounge.yourdomain.com as the example domain, but whichever one you use should point at your server. You could also just use your server's public IP if you don't have a domain</li>
+<li><strong>nginx</strong> or another comparable web server. I prefer nginx. Any web server that works for reverse proxying (including web sockets!) will be fine, but I'm only giving config for nginx, since nginx also handles web sockets well especially. Feel free to hit me up with a working apache2 or similar config</li>
+<li><strong>git</strong> To check out the synclounge code. If you're running ubuntu/debian, this is as easy as: <code>sudo apt-get install git</code></li>
+<li><strong>nodejs and npm</strong> with Node at least v8.4.0.</li>
+<li>Preferred method is probably using nvm (node version manager), which will install a local version of node in your home directory. <a href="https://tecadmin.net/install-nodejs-with-nvm/">Here's a guide for NVM installation.</a></li>
+<li>You can use the distro package version most likely, or at least find a repo or PPA for them. <a href="https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/">Here's a sample Ubuntu guide.</a> Note that if using packages, you'll need to use sudo when we install global npm packages.</li>
+<li>Either way, run, <code>node -v</code> and <code>npm -v</code> to confirm you have them.</li>
 </ul>
-<h2 id="first-steps">First steps<a class="headerlink" href="#first-steps" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Clone the repo: <code>git clone https://github.com/samcm/SyncLounge</code></li>
-<li>Change to the directory: <code>cd synclounge</code></li>
-<li>Install packages and dependencies: <code>npm install</code></li>
-</ol>
-<h3 id="running-the-webapp">Running the webapp<a class="headerlink" href="#running-the-webapp" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Build the webapp: <code>npm run build</code></p>
-<p>Notes: This must be done anytime you change the <code>webroot</code> setting</p>
-</li>
-<li>
-<p>Run the webapp using <code>node webapp.js</code></p>
-<p>Don't forget that you need to set Access URL as described in <a href="/self-hosted/getting-started/">Getting Started</a>.</p>
-<p>The SL web app will be running at <code>http://ip:8088/</code> or <code>http://ip:8088/WEBROOT</code> if you set <code>webroot</code>.</p>
-</li>
-</ol>
-<h3 id="running-the-server">Running the server<a class="headerlink" href="#running-the-server" title="Permanent link">&para;</a></h3>
+<p><strong>Note</strong>: While you can run synclounge over https with an ssl certificate, I'm not going to do that here. You could easily use https instead of http in your URL, and setup your ssl certificate in your web server config. But unless you setup your plex server using https as well, connecting to your plex will fail.</p>
+<h2 id="setting-up-synclounge-code-directory">Setting up SyncLounge Code Directory<a class="headerlink" href="#setting-up-synclounge-code-directory" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Run the server using <code>npm run server</code></p>
-<p>The SL server will be running at <code>http://ip:8089/slserver</code>.</p>
-</li>
+<li>Check out the synclounge project: <code>git clone https://github.com/samcm/synclounge</code></li>
+<li>enter directory: <code>cd synclounge</code></li>
+<li>install node libraries using npm: <code>npm install</code></li>
 </ul>
+<h2 id="settingsjson-file">settings.json file<a class="headerlink" href="#settingsjson-file" title="Permanent link">&para;</a></h2>
+<p>See the <a href="/self-hosted/settings/">Settings page</a> for more detail on each of the settings. While you can potentially set these using command line arguments or environmental variables, editing the settings.json file directly is by far the most reliable way.
+Here's an example settings.json file:</p>
+<pre><code class="json">    {
+       &quot;webroot&quot;:&quot;&quot;,
+       &quot;serverroot&quot;:&quot;&quot;,
+       &quot;accessUrl&quot;:&quot;http://synclounge.yourdomain.com&quot;,
+       &quot;webapp_port&quot;:8280,
+       &quot;server_port&quot;:8281,
+       &quot;authentication&quot;:{
+          &quot;mechanism&quot;:&quot;plex&quot;,
+          &quot;type&quot;:[
+             &quot;server&quot;
+          ],
+          &quot;authorized&quot;:[
+             &quot;YOUR_PLEX_MACHINE_ID&quot;
+          ]
+       },
+       &quot;servers&quot;:[
+          {
+             &quot;name&quot;:&quot;Your Super Cool Plex Party Server&quot;,
+             &quot;location&quot;:&quot;Space, the Final Frontier&quot;,
+             &quot;url&quot;:&quot;http://synclounge.yourdomain.com&quot;,
+             &quot;logo&quot;:&quot;&quot;
+          }
+       ],
+       &quot;autoJoin&quot;:false,
+       &quot;autoJoinServer&quot;:&quot;&quot;,
+       &quot;autoJoinRoom&quot;:&quot;&quot;,
+       &quot;autoJoinPassword&quot;:&quot;&quot;
+    }
+</code></pre>
+
+<p>I've made some opinionated assumptions for simplicity here, and again read the whole SyncLounge readme for more details, but the highlights are:</p>
+<ul>
+<li><strong>accessUrl</strong> - Set this to the url you want synclounge to be at, and replace <code>http://synclounge.yourdomain.com</code> with that wherever you see it.</li>
+<li><strong>Server ports</strong>. These can be whatever you want. I've changed them from the default 8080 and 8081 since they're most commonly used. If you change these just keep them in mind when we do nginx/apache setup</li>
+<li><code>webapp_port</code> - The local port the web frontend will be served at.</li>
+<li><code>server_port</code> - The local port the backend will be served at.</li>
+<li><strong>authentication</strong> - sets who is allowed to use your SyncLounge. I have this set so that if someone has access to your plex server, they have access to your synclounge server (presuming you're trying to stream from your own plex server library!) If you want to do that, set <code>YOUR_PLEX_MACHINE_ID</code> to your server ID.</li>
+<li>If you launch plex.tv and go to Settings -&gt; Manage -&gt; Libraries, you can see your server ID in the URL. It'll be the XXXX in <code>https://app.plex.tv/desktop#!/settings/server/XXXX/manage/libraries</code> . Put that hex code as your plex machine id.</li>
+<li>If you don't want to authenticate that users have access to your plex server, you can either remove the authentication part of the settings, or replace it with <code>"authentication":{"mechanism":"none"},</code></li>
+<li><strong>HOWEVER</strong>, the user will <em>still</em> need to log in with their plex account, because SyncLounge opens videos via plex using their plex account. Leaving authentication as none just means they can log in to your SyncLounge without their user having been given shared access to your plex server. However, unless they have access to a different plex server with the exact same videos you're trying to play, SyncLounge won't work for them anyway. I'd say for 95% of use cases, you're trying to use SyncLounge with your own plex server you've shared with other people, so authenticating they have access to your plex server let's you know there's a problem when they go to sign in, as opposed to waiting til they get into the room with you and nothing will play for them.</li>
+<li>In 95% of cases, you want them to give you their plex account email address, you want to add them to sharing in your plex server (and them confirm it via email), and <em>then</em> you want to give them the SyncLounge invite link. If you fall into that case, leave the authentication as I described and add your machine id in.</li>
+<li><strong>servers</strong> - I'm replacing the default server list with the custom server. If you want the other servers you can set this server object to <code>customServer</code> as shown in the official docs. The upside of replacing all the servers is your users can skip picking a server. Set the name, location, and url details here (the url being the same as what you set above), and optionally a thumbnail which won't get shown if you only have one server anyway.</li>
+</ul>
+<h2 id="build-synclounge-web-files">Build SyncLounge web files<a class="headerlink" href="#build-synclounge-web-files" title="Permanent link">&para;</a></h2>
+<p>Now that we have the settings.json setup, it's time to build the web frontend files. This is easy. Run: <code>npm run build</code>
+Then go get a drink or a snack, because it will take a minute. You may or may not need to re-run the build if you edit settings.json later, but probably not? I haven't tested that out.</p>
+<h2 id="run-synclounge">Run SyncLounge<a class="headerlink" href="#run-synclounge" title="Permanent link">&para;</a></h2>
+<h3 id="to-test">To Test<a class="headerlink" href="#to-test" title="Permanent link">&para;</a></h3>
+<p>This is just to test out that it's all working while you can see the console output. If you're a confident person you can just switch to the Production options. But you might want to try these if it's not working.
+You need to both run the SyncLounge web and server instances. You can do this is multiple ssh windows, but I suggest using <code>screen</code>. If you don't have screen installed, you can get it with <code>sudo apt-get install screen</code> . As a quick screen tutorial:</p>
+<ul>
+<li>List any existing screen sessions: <code>screen -ls</code></li>
+<li>Open a new named screen session: <code>screen -S YourName</code></li>
+<li>Send the screen session you're in to the background: Hold down the CTRL key, then press and release A, then D</li>
+<li>Resume a screen session running in the background: <code>screen -r YourName</code>
+So when running the server commands I suggest running <code>screen -S sl-server</code> to open a screen for that, then CTRL-A-D to get out of it, then <code>screen -S sl-web</code> to run the web commands. Then you can rejoin the screens with <code>screen -r sl-web</code> or <code>screen -r sl-server</code> . But I'm a guide writer, not a cop, so do whatever's easiest for you.</li>
+</ul>
+<p>To run the synclounge server, run: <code>node server.js</code> and leave it running. You'll see output like:</p>
+<pre><code class="bash">Setting up with serverRoot of /slserver
+SyncLounge Server successfully started on port 8281
+Connected users: 0
+</code></pre>
+
+<p>With whatever server port you set.
+To run the synclounge web files, run: <code>node webapp.js</code> and leave it running. You'll see it output your Settings and such, followed by:</p>
+<pre><code class="bash">SyncLounge WebApp successfully started on port 8280
+Access URL is http://synclounge.yourdomain.com
+</code></pre>
+
+<p>With whatever url and web port you set</p>
+<h2 id="web-server-setup">Web Server Setup<a class="headerlink" href="#web-server-setup" title="Permanent link">&para;</a></h2>
+<h3 id="nginx">NGINX<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
+<p>Here's a sample nginx site config (this is essentially the same as the one in the synclounge readme):</p>
+<pre><code class="conf">server {
+  listen 80;
+  server_name synclounge.yourdomain.com;
+  # you can make a separate access log if you want,
+  # or just leave it to the default nginx/access.log
+  #access_log /var/log/nginx/synclounge.yourdomain.com_access.log;
+
+  proxy_redirect off;
+  proxy_buffering off;
+  location / {
+    include proxy_params;
+    proxy_pass http://localhost:8280;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection &quot;upgrade&quot;;
+  }
+  location /slserver {
+    include proxy_params;
+    proxy_pass http://localhost:8281/slserver;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection &quot;upgrade&quot;;
+  }
+}
+</code></pre>
+
+<p>This should go in your <code>/etc/nginx/sites-available/</code> directory, likely named <code>synclounge.yourdomain.com.conf</code> . Update the domain you're using in the config and the filename, and if you changed web or server ports in your synclounge config, change them in the location / and /slserver sections respectively.</p>
+<p>This also assumes you have a <code>/etc/nginx/proxy_params</code> file. If you don't, make one with:</p>
+<pre><code class="bash">proxy_set_header Host $http_host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Forwarded-Proto $scheme;
+</code></pre>
+
+<p>Once you have the config setup how you want:</p>
+<ul>
+<li>Symlink it to sites-enabled: <code>sudo ln -s /etc/nginx/sites-available/synclounge.yourdomain.com.conf /etc/nginx/sites-enabled/</code></li>
+<li>Check your nginx config for errors: <code>sudo nginx -t</code></li>
+<li>If everything looks good, reload nginx with your changes: <code>sudo service nginx reload</code></li>
+</ul>
+<p>Then try going to your synclounge install in your browser!</p>
+<h3 id="for-production-serious-business-plex-watching">For "Production" (Serious Business Plex Watching)<a class="headerlink" href="#for-production-serious-business-plex-watching" title="Permanent link">&para;</a></h3>
+<p>Once you've tested out running this and see it's working (or immediately if you're feeling lucky), you probably want this to just run in the background all the time, including starting up with your server. To do that we'll be using a node utility called <strong>pm2</strong></p>
+<p>To install pm2 run <code>npm install -g pm2</code> to install it globally. If you're not running npm with nvm, you probably need to do <code>sudo npm install -g pm2</code></p>
+<p>If you're running the server or web files still from testing, stop them (just ctrl-c will do it).</p>
+<p>Then from the synclounge directory, we just need to run 2 commands:</p>
+<ul>
+<li><code>pm2 start webapp.js --name=sl-web</code></li>
+<li><code>pm2 start server.js --name=sl-server</code></li>
+</ul>
+<p>If you run <code>pm2 list</code>, you should see two processes running:</p>
+<pre><code class="bash">┌─────┬──────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name         │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼──────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 2   │ ◉ sl-server  │ default     │ 2.0.0   │ fork    │ 4521     │ 107m   │ 0    │ online    │ 0.1%     │ 17.2mb   │ joe      │ disabled │
+│ 1   │ ◉ sl-web     │ default     │ 2.0.0   │ fork    │ 4548     │ 107m   │ 2    │ online    │ 0.1%     │ 12.8mb   │ joe      │ disabled │
+└─────┴──────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+</code></pre>
+
+<p>Now go try your synclounge site again and confirm it's still working.</p>
+<p>If it's not working, you can still see the output from the programs in the pm2 logs. look in <code>~/.pm2/logs/</code> for the output and error logs for each of your processes.</p>
+<p>If it's working, you probably want this to launch on startup now. To do that, first run <code>pm2 save</code>, which will save your 2 processes to run when pm2 starts up. Then call <code>pm2 startup</code> . pm2 will give you a command to run to add your user's pm2 to the server setup. It'll probably look something like this:</p>
+<pre><code class="bash">sudo env PATH=$PATH:/home/user/.nvm/versions/node/v12.7.0/bin /home/user/.nvm/versions/node/v12.7.0/lib/node_modules/pm2/bin/pm2 startup systemd -u user --hp /home/user
+</code></pre>
+
+<p>Run that, and now your pm2 will start with the server.</p>
+<h2 id="thats-all-folks">That's all folks<a class="headerlink" href="#thats-all-folks" title="Permanent link">&para;</a></h2>
+<p>If something doesn't appear to work, check the output of the web or server terminal/log outputs, or your nginx access and error log, and <a href="https://discord.gg/Cp9RPSJ">ask on Discord</a>.</p>
                 
               
               
@@ -947,7 +1179,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../docker/" title="Running with Docker" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../synology/" title="Running on Synology NAS" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -959,13 +1191,13 @@
                 
                   
                 
-                Running with Docker
+                Running on Synology NAS
               </div>
             </div>
           </a>
         
         
-          <a href="../synology/" title="Running on Synology NAS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../reverse-proxy/" title="Using a Reverse Proxy" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -974,7 +1206,7 @@
                 
                   
                 
-                Running on Synology NAS
+                Using a Reverse Proxy
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
