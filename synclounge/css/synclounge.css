@@ -88,6 +88,10 @@ a {
   background: transparent;
 }
 
+.md-typeset hr {
+  border-color: #ffc107;
+}
+
 /* Fix mobile stylinf */
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title,

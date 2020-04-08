@@ -3,6 +3,8 @@ Here's how you set up on SyncLounge with Docker on Synology NAS.
 [jacobmix](https://gist.github.com/jacobmix) made this awesome how-to for Synology!
 The original gist can be found [here](https://gist.github.com/jacobmix/32003649e06d5588dba35e5edafa5d7b)
 
+---
+
 First make sure you got the Docker Hub in your registry:
 ![Registry](https://user-images.githubusercontent.com/5995327/77686804-6398f400-6f95-11ea-97a4-693afb538c70.png)
 
