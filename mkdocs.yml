@@ -56,13 +56,16 @@ nav:
       - FAQ: faq.md
   - How-tos:
       - How-to Home: how-tos/how-tos.md
-      - Change the Host: how-tos/change-host.md
-      - Party Pausing: how-tos/party-pausing.md
+      - Using the App:
+          - Change the Host: how-tos/app/change-host.md
+          - Party Pausing: how-tos/app/party-pausing.md
+      - Self-hosting: self-hosted/getting-started.md
   - Self-Hosting:
       - Getting Started: self-hosted/getting-started.md
       - Running with Docker: self-hosted/docker.md
-      - Running on Synology NAS: self-hosted/synology.md
       - Running Locally: self-hosted/locally.md
+      - Running on Synology NAS: self-hosted/synology.md
+      - Running on Linux: self-hosted/linux.md
       - Using a Reverse Proxy: self-hosted/reverse-proxy.md
       - Settings: self-hosted/settings.md
   - Contributing:

@@ -3,6 +3,8 @@
 
 The official Docker container for SyncLounge can be found on [Docker Hub](https://hub.docker.com/r/starbix/synclounge) made by [Starbix](https://github.com/Starbix/)
 
+Note: If you have issues with the ENV variables in [Settings](/self-hosted/settings/), trying using the argument instead for the environment variable.
+
 The following tags are available:
 
 - latest / alpine: webapp and server based on alpine

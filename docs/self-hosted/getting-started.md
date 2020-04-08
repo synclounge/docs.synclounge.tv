@@ -23,5 +23,3 @@ If you are running linux, check out [DockSTARTer](https://dockstarter.com/)! Doc
 ### Locally
 
 You may also run it directly on a machine using a [local install](/self-hosted/locally/).
-
-[joecot](https://gist.github.com/joecot) made an awesome [how-to for linux](https://gist.github.com/joecot/2b6fb52f72ca8022cacc4543fe1bed1b) that you should check out!
