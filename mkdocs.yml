@@ -57,8 +57,8 @@ nav:
   - How-tos:
       - How-to Home: how-tos/how-tos.md
       - Using the App:
-        - Change the Host: how-tos/app/change-host.md
-        - Party Pausing: how-tos/app/party-pausing.md
+          - Change the Host: how-tos/app/change-host.md
+          - Party Pausing: how-tos/app/party-pausing.md
       - Self-hosting: self-hosted/getting-started.md
   - Self-Hosting:
       - Getting Started: self-hosted/getting-started.md
