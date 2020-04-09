@@ -10,7 +10,7 @@ NOTE: Argument and ENV should be able to be used interchangeably. If you have is
 | ------ | ------ | ------ |
 | webroot | WEB_ROOT | Change the base URL of the web app. Ex - `/lounge` |
 | webapp_port | WEB_PORT | Change the port the web app uses. Defaults to `8088` |
-| accessUrl | WEB_ACCESSURL | Set the URL the web app uses for things like invites. Ex - `http://mysynclounge.com/<wwbroot>` (if webroot is set) |
+| accessUrl | WEB_ACCESSURL | Set the URL the web app uses for things like invites. Ex - `http://mysynclounge.com/<webroot>` (if webroot is set) |
 | autoJoin | AUTOJOIN_ENABLED | Set to `true` to enable auto joining. Defaults to `false` |
 | autoJoinServer | AUTOJOIN_SERVERURL | Set this to the server URL you want the user to auto join. Required if auto join is enabled. Ex - `http://mysynclounge.com/slserver` |
 | autoJoinRoom | AUTOJOIN_ROOM | Set this to the room name in the server that you want the users to auto join. Optional |
