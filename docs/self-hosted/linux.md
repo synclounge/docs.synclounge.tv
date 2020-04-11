@@ -57,7 +57,7 @@ Here's an example settings.json file:
           {
              "name":"Your Super Cool Plex Party Server",
              "location":"Space, the Final Frontier",
-             "url":"http://synclounge.yourdomain.com",
+             "url":"http://synclounge.yourdomain.com/slserver",
              "logo":""
           }
        ],
@@ -79,7 +79,7 @@ I've made some opinionated assumptions for simplicity here, and again read the w
 * If you don't want to authenticate that users have access to your plex server, you can either remove the authentication part of the settings, or replace it with `"authentication":{"mechanism":"none"},`
   * **HOWEVER**, the user will *still* need to log in with their plex account, because SyncLounge opens videos via plex using their plex account. Leaving authentication as none just means they can log in to your SyncLounge without their user having been given shared access to your plex server. However, unless they have access to a different plex server with the exact same videos you're trying to play, SyncLounge won't work for them anyway. I'd say for 95% of use cases, you're trying to use SyncLounge with your own plex server you've shared with other people, so authenticating they have access to your plex server let's you know there's a problem when they go to sign in, as opposed to waiting til they get into the room with you and nothing will play for them.
   * In 95% of cases, you want them to give you their plex account email address, you want to add them to sharing in your plex server (and them confirm it via email), and *then* you want to give them the SyncLounge invite link. If you fall into that case, leave the authentication as I described and add your machine id in.
-* **servers** - I'm replacing the default server list with the custom server. If you want the other servers you can set this server object to `customServer` as shown in the official docs. The upside of replacing all the servers is your users can skip picking a server. Set the name, location, and url details here (the url being the same as what you set above), and optionally a thumbnail which won't get shown if you only have one server anyway.
+* **servers** - I'm replacing the default server list with the custom server. If you want the other servers you can set this server object to `customServer` as shown in the official docs. The upside of replacing all the servers is your users can skip picking a server. Set the name, location, and url details here, and optionally a thumbnail which won't get shown if you only have one server anyway.
 
 ## Build SyncLounge web files
 
