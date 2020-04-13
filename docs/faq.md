@@ -35,7 +35,7 @@ hide_nav_right: true
 
       - An adblocker, firewall, network configuration, ISP, or some other software on your computer is blocking the connection.
       - The server owner's firewall, network configuration, ISP, or some other software is blocking the connection.
-      - Remote access is not enabled on the server or it isn't working properly.
+      - Remote access is not enabled on the server or it isn't working properly. To enable remote access or to check if remote access is enabled succesfully, see the [Plex's Remote Access article](https://support.plex.tv/articles/200289506-remote-access/)
 
 - _Client X isn't working!_
 

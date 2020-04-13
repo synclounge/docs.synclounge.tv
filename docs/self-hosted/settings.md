@@ -39,7 +39,7 @@ To enable authentication, the following setting and format is used
 
 - `mechanism` specifies how SyncLounge should authenticate a user. This is mostly for future-proofing to allow other authentication mechanisms to be provided. Defaults to `none`.
 - `type` is mechanism dependent. Since `plex` is the only one currently, either or both `server` and `user` can be specified.
-  - `server` checks against the plex server machine ID (`PLEX_SERVER_MACHINE_ID`). If the user has access to a server matching any of the IDs in the `authorized` list, they will be granted access.
+  - `server` checks against the plex server machine ID (`PLEX_SERVER_MACHINE_ID`). If the user has access to a server matching any of the IDs in the `authorized` list, they will be granted access. See the "You’ll Need Your Token" and "Base Server Capabilities" in [Plex's "Plex Media Server URL Commands" Article](https://support.plex.tv/articles/201638786-plex-media-server-url-commands/) to get the `machineIdentifier` for your server. You can also use `https://plex.tv/pms/servers.xml?includeHttps=1&X-Plex-Token=YourTokenGoesHere` to get the machine identifiers for any of the servers your account has access to.
   - `user` checks against the user's email (`PLEX_USER_EMAIL`) or username (`PLEX_USER_NAME`). If either matches a value in the `authorized` list, they will be granted access.
 - `authorized` is a list of information for who is authorized.
 
