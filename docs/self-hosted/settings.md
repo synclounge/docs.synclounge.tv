@@ -45,44 +45,71 @@ To enable authentication, the following setting and format is used
 
 ## Customize the server list
 
+## Server object
+
+The servers list can be modified with your own entry for just the Custom Server in the servers list or for the entire list of servers.
+
+The full server object looks like this:
+
+```json
+{
+    "name": "",
+    "location": "",
+    "url": "",
+    "image": "",
+    "defaultRoom": "",
+    "defaultPassword": ""
+  }
+```
+
+- `name` specifies the text for the name.
+- `location` specifies the text for the location.
+- `url` specifies the server url. This should match your SyncLounge server URL and will look like `http(s)://<DOMAIN or IP:PORT>/<SERVERROOT>`
+- `image` specifies the URL of the image to use.
+
+A server object can also handle a default Room, with or without password. If set, SyncLounge will attempt to auto-join the room when the server is selected by the user.
+
+- `defaultRoom` specifies the name of the room to send the user to after clicking "Connect"
+- `defaultPassword` specifies the password for the room above, if provided.
+
 ### Customize the Custom Server entry
 
-Adding this to your settings will override the the custom server in the server list.
+The Custom Server entry can be modified by adding this to your settings. This takes a single server object and will override the the custom server in the server list.
 
 ```json
 "customServer": {
   "name": "Custom Server 1",
   "location": "Custom Location",
-  "url": "https://mycustomserver.com/server",
+  "url": "https://mycustomserver.com/slserver",
   "image": "https://mycustomserver.com/logo.png"
 }
 ```
 
 ![Custom Server Example](https://user-images.githubusercontent.com/1524443/76433720-19a3f180-638b-11ea-8c20-1997728e8325.png)
 
-### Customize servers list
+### Customize the entire list
 
-The servers list can be modified with your own list of servers. If this setting is provided, it will ignore the `customServer` setting above. Also, if only one server is provided, it will automatically join it! A server entry can also handle a default Room, with or without password. If set, SyncLounge will attempt to auto-join the room when the server is selected by the user.
+The entire servers list can be modified with your own list of servers. If this setting is provided, it will ignore the `customServer` setting above. Also, if only one server is provided, it will automatically join it!
 
 ```json
 "servers": [
   {
     "name": "Custom Server 1",
     "location": "Custom Location",
-    "url": "https://1.mycustomserver.com/server",
+    "url": "https://1.mycustomserver.com/slserver",
     "image": "https://mycustomserver.com/logo.png"
   },
   {
     "name": "Custom Server 2",
     "location": "Custom Location",
-    "url": "https://2.mycustomserver.com/server",
+    "url": "https://2.mycustomserver.com/slserver",
     "image": "https://mycustomserver.com/logo-2.png",
     "defaultRoom": "DefaultRoom"
   },
   {
     "name": "Custom Server 3",
     "location": "Custom Location",
-    "url": "https://3.mycustomserver.com/server",
+    "url": "https://3.mycustomserver.com/slserver",
     "image": "https://mycustomserver.com/logo-3.png",
     "defaultRoom": "DefaultRoom",
     "defaultPassword": "DefaultPassword123"

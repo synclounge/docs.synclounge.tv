@@ -9,8 +9,14 @@
 However you decide to run SyncLounge yourself, to run the webapp you need to set the Access URL using one of these methods:
 
 * In settings.json
-* Via argument. E.g. - `node webapp.js --accessUrl=http://example.com`
+* Via argument. E.g. - `node webapp.js --accessUrl=<value>`
 * Environment Variable
+
+All of the variables and what they do can be found on the [Settings](/self-hosted/settings/) page.
+
+## Issues
+
+If you encounter any issues setting up SyncLounge, see the [Report an Issue](/how-tos/report_an_issue/) page.
 
 ## Running
 

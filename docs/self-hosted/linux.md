@@ -58,7 +58,7 @@ Here's an example settings.json file:
              "name":"Your Super Cool Plex Party Server",
              "location":"Space, the Final Frontier",
              "url":"http://synclounge.yourdomain.com/slserver",
-             "logo":""
+             "image":""
           }
        ],
        "autoJoin":false,
@@ -68,7 +68,7 @@ Here's an example settings.json file:
     }
 ```
 
-I've made some opinionated assumptions for simplicity here, and again read the whole SyncLounge readme for more details, but the highlights are:
+I've made some opinionated assumptions for simplicity here, and again read the whole SyncLounge documentation for more details, but the highlights are:
 
 * **accessUrl** - Set this to the url you want synclounge to be at, and replace `http://synclounge.yourdomain.com` with that wherever you see it.
 * **Server ports**. These can be whatever you want. I've changed them from the default 8080 and 8081 since they're most commonly used. If you change these just keep them in mind when we do nginx/apache setup
@@ -121,7 +121,7 @@ With whatever url and web port you set
 
 ### NGINX
 
-Here's a sample nginx site config (this is essentially the same as the one in the synclounge readme):
+Here's a sample nginx site config (this is essentially the same as the one in the synclounge documentation):
 
 ```conf
 server {

@@ -3,6 +3,8 @@
 If you want to host SyncLounge on your own domain and not having to give out your IP address, you will want to use a reverse proxy.
 There are many different options such as nginx, haproxy, traefik, etc.
 
+The following assume that you are running SyncLounge with default settings. If you have changed any of the default settings, like the port or root, you will want to modify the configurations provided here accordingly.
+
 ## Nginx
 
 If you are using the [Let's Encrypt container by LinuxServer.io (LSIO)](https://hub.docker.com/r/linuxserver/letsencrypt), you can use the provided configs found in [LSIO's reverse proxy repo](https://github.com/linuxserver/reverse-proxy-confs).
@@ -47,9 +49,9 @@ This was provided by [LostSoulfly](https://github.com/LostSoulfly) in this [comm
 ```conf
 <SUBDOMAIN.DOMAIN.TLD> {
     gzip
-    log logs/slserver.access.log
+    log logs/synclounge.access.log
 
-    proxy / <IP>:8089 {
+    proxy / <IP>:8088 {
         except /socket.io
         except /slserver
         websocket
