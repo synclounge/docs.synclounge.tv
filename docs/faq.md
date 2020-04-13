@@ -15,7 +15,7 @@ hide_nav_right: true
 
 - _Do the other users in my room need access to my Plex Server?_
 
-    No. The user just needs to have access to the same media the host is playing but it doesn't have to be on the same Plex Server.
+    Yes, unless every user in your room has their own Plex server with their own copy of the media file.
 
 - _How do I do X when using SyncLounge?_
 
