@@ -456,6 +456,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-tos/report_an_issue/" title="Report an Issue" class="md-nav__link">
+      Report an Issue
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -619,7 +631,14 @@
     Customize the server list
   </a>
   
-    <nav class="md-nav" aria-label="Customize the server list">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-object" class="md-nav__link">
+    Server object
+  </a>
+  
+    <nav class="md-nav" aria-label="Server object">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -630,8 +649,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#customize-servers-list" class="md-nav__link">
-    Customize servers list
+  <a href="#customize-the-entire-list" class="md-nav__link">
+    Customize the entire list
   </a>
   
 </li>
@@ -871,7 +890,14 @@
     Customize the server list
   </a>
   
-    <nav class="md-nav" aria-label="Customize the server list">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-object" class="md-nav__link">
+    Server object
+  </a>
+  
+    <nav class="md-nav" aria-label="Server object">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -882,8 +908,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#customize-servers-list" class="md-nav__link">
-    Customize servers list
+  <a href="#customize-the-entire-list" class="md-nav__link">
+    Customize the entire list
   </a>
   
 </li>
@@ -1004,42 +1030,66 @@
 <ul>
 <li><code>mechanism</code> specifies how SyncLounge should authenticate a user. This is mostly for future-proofing to allow other authentication mechanisms to be provided. Defaults to <code>none</code>.</li>
 <li><code>type</code> is mechanism dependent. Since <code>plex</code> is the only one currently, either or both <code>server</code> and <code>user</code> can be specified.</li>
-<li><code>server</code> checks against the plex server machine ID (<code>PLEX_SERVER_MACHINE_ID</code>). If the user has access to a server matching any of the IDs in the <code>authorized</code> list, they will be granted access.</li>
+<li><code>server</code> checks against the plex server machine ID (<code>PLEX_SERVER_MACHINE_ID</code>). If the user has access to a server matching any of the IDs in the <code>authorized</code> list, they will be granted access. See the "You’ll Need Your Token" and "Base Server Capabilities" in <a href="https://support.plex.tv/articles/201638786-plex-media-server-url-commands/">Plex's "Plex Media Server URL Commands" Article</a> to get the <code>machineIdentifier</code> for your server. You can also use <code>https://plex.tv/pms/servers.xml?includeHttps=1&amp;X-Plex-Token=YourTokenGoesHere</code> to get the machine identifiers for any of the servers your account has access to.</li>
 <li><code>user</code> checks against the user's email (<code>PLEX_USER_EMAIL</code>) or username (<code>PLEX_USER_NAME</code>). If either matches a value in the <code>authorized</code> list, they will be granted access.</li>
 <li><code>authorized</code> is a list of information for who is authorized.</li>
 </ul>
 <h2 id="customize-the-server-list">Customize the server list<a class="headerlink" href="#customize-the-server-list" title="Permanent link">&para;</a></h2>
+<h2 id="server-object">Server object<a class="headerlink" href="#server-object" title="Permanent link">&para;</a></h2>
+<p>The servers list can be modified with your own entry for just the Custom Server in the servers list or for the entire list of servers.</p>
+<p>The full server object looks like this:</p>
+<pre><code class="json">{
+    &quot;name&quot;: &quot;&quot;,
+    &quot;location&quot;: &quot;&quot;,
+    &quot;url&quot;: &quot;&quot;,
+    &quot;image&quot;: &quot;&quot;,
+    &quot;defaultRoom&quot;: &quot;&quot;,
+    &quot;defaultPassword&quot;: &quot;&quot;
+  }
+</code></pre>
+
+<ul>
+<li><code>name</code> specifies the text for the name.</li>
+<li><code>location</code> specifies the text for the location.</li>
+<li><code>url</code> specifies the server url. This should match your SyncLounge server URL and will look like <code>http(s)://&lt;DOMAIN or IP:PORT&gt;/&lt;SERVERROOT&gt;</code></li>
+<li><code>image</code> specifies the URL of the image to use.</li>
+</ul>
+<p>A server object can also handle a default Room, with or without password. If set, SyncLounge will attempt to auto-join the room when the server is selected by the user.</p>
+<ul>
+<li><code>defaultRoom</code> specifies the name of the room to send the user to after clicking "Connect"</li>
+<li><code>defaultPassword</code> specifies the password for the room above, if provided.</li>
+</ul>
 <h3 id="customize-the-custom-server-entry">Customize the Custom Server entry<a class="headerlink" href="#customize-the-custom-server-entry" title="Permanent link">&para;</a></h3>
-<p>Adding this to your settings will override the the custom server in the server list.</p>
+<p>The Custom Server entry can be modified by adding this to your settings. This takes a single server object and will override the the custom server in the server list.</p>
 <pre><code class="json">&quot;customServer&quot;: {
   &quot;name&quot;: &quot;Custom Server 1&quot;,
   &quot;location&quot;: &quot;Custom Location&quot;,
-  &quot;url&quot;: &quot;https://mycustomserver.com/server&quot;,
+  &quot;url&quot;: &quot;https://mycustomserver.com/slserver&quot;,
   &quot;image&quot;: &quot;https://mycustomserver.com/logo.png&quot;
 }
 </code></pre>
 
 <p><img alt="Custom Server Example" src="https://user-images.githubusercontent.com/1524443/76433720-19a3f180-638b-11ea-8c20-1997728e8325.png" /></p>
-<h3 id="customize-servers-list">Customize servers list<a class="headerlink" href="#customize-servers-list" title="Permanent link">&para;</a></h3>
-<p>The servers list can be modified with your own list of servers. If this setting is provided, it will ignore the <code>customServer</code> setting above. Also, if only one server is provided, it will automatically join it! A server entry can also handle a default Room, with or without password. If set, SyncLounge will attempt to auto-join the room when the server is selected by the user.</p>
+<h3 id="customize-the-entire-list">Customize the entire list<a class="headerlink" href="#customize-the-entire-list" title="Permanent link">&para;</a></h3>
+<p>The entire servers list can be modified with your own list of servers. If this setting is provided, it will ignore the <code>customServer</code> setting above. Also, if only one server is provided, it will automatically join it!</p>
 <pre><code class="json">&quot;servers&quot;: [
   {
     &quot;name&quot;: &quot;Custom Server 1&quot;,
     &quot;location&quot;: &quot;Custom Location&quot;,
-    &quot;url&quot;: &quot;https://1.mycustomserver.com/server&quot;,
+    &quot;url&quot;: &quot;https://1.mycustomserver.com/slserver&quot;,
     &quot;image&quot;: &quot;https://mycustomserver.com/logo.png&quot;
   },
   {
     &quot;name&quot;: &quot;Custom Server 2&quot;,
     &quot;location&quot;: &quot;Custom Location&quot;,
-    &quot;url&quot;: &quot;https://2.mycustomserver.com/server&quot;,
+    &quot;url&quot;: &quot;https://2.mycustomserver.com/slserver&quot;,
     &quot;image&quot;: &quot;https://mycustomserver.com/logo-2.png&quot;,
     &quot;defaultRoom&quot;: &quot;DefaultRoom&quot;
   },
   {
     &quot;name&quot;: &quot;Custom Server 3&quot;,
     &quot;location&quot;: &quot;Custom Location&quot;,
-    &quot;url&quot;: &quot;https://3.mycustomserver.com/server&quot;,
+    &quot;url&quot;: &quot;https://3.mycustomserver.com/slserver&quot;,
     &quot;image&quot;: &quot;https://mycustomserver.com/logo-3.png&quot;,
     &quot;defaultRoom&quot;: &quot;DefaultRoom&quot;,
     &quot;defaultPassword&quot;: &quot;DefaultPassword123&quot;

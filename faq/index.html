@@ -388,8 +388,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#issues" class="md-nav__link">
-    Issues
+  <a href="#common-issues" class="md-nav__link">
+    Common Issues
   </a>
   
 </li>
@@ -512,6 +512,18 @@
   <li class="md-nav__item">
     <a href="../self-hosted/getting-started/" title="Self-hosting" class="md-nav__link">
       Self-hosting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-tos/report_an_issue/" title="Report an Issue" class="md-nav__link">
+      Report an Issue
     </a>
   </li>
 
@@ -842,8 +854,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#issues" class="md-nav__link">
-    Issues
+  <a href="#common-issues" class="md-nav__link">
+    Common Issues
   </a>
   
 </li>
@@ -887,12 +899,16 @@
 <p>SyncLounge uses your Plex account to fetch details about your Plex Clients and Media Servers to use within the app. For security concerns, see the 'Security' section below.</p>
 </li>
 <li>
+<p><em>Do the other users in my room need access to my Plex Server?</em></p>
+<p>No. The user just needs to have access to the same media the host is playing but it doesn't have to be on the same Plex Server.</p>
+</li>
+<li>
 <p><em>How do I do X when using SyncLounge?</em></p>
 <p>If you are trying to figure out how to do something when <em>using</em> SyncLounge, check the <a href="/how-tos/how-tos/">how-to</a> section of the documentation. This will show you how to change hosts, user Party Pausing, etc.</p>
 <p>If you are trying to figure out how to do something when <em>running</em> SyncLounge, check the <a href="/how-tos/how-tos/">how-to</a> and <a href="/self-hosted/getting-started/">Self-hosting</a> sections. This will tell you how to setup and configure your servers.</p>
 </li>
 </ul>
-<h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
+<h2 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><em>I can't log in to SyncLounge</em></p>
@@ -904,7 +920,7 @@
 <ul>
 <li>An adblocker, firewall, network configuration, ISP, or some other software on your computer is blocking the connection.</li>
 <li>The server owner's firewall, network configuration, ISP, or some other software is blocking the connection.</li>
-<li>Remote access is not enabled on the server or it isn't working properly.</li>
+<li>Remote access is not enabled on the server or it isn't working properly. To enable remote access or to check if remote access is enabled succesfully, see the <a href="https://support.plex.tv/articles/200289506-remote-access/">Plex's Remote Access article</a></li>
 </ul>
 </li>
 <li>
@@ -920,11 +936,19 @@
 </ul>
 </li>
 <li>
-<p><em>Someone in my room is getting "the quota has been exceeded" error</em></p>
+<p><em>Someone in my room is getting "the quota has been exceeded"</em></p>
+</li>
+<li><em>The SyncLounge player is continually buffering</em></li>
+<li>
+<p>_I'm getting the message <code>Failed to execute 'appendBuffer' on 'SourceBuffer': The SourceBuffer is full, and cannot free space to append additional buffers.</code></p>
 <p>Lower the bitrate (aka streaming quality) on the client.</p>
 </li>
+<li>
+<p><em>Someone in my room is getting "Failed to find a compatible copy of <code>&lt;MEDIA_NAME&gt;</code>. If you have access to the content try manually playing it."</em></p>
+<p>SyncLounge is unable to retrieve information for the currently selected media on the server the user has access to. The user needs to make sure they have access to the same media (doesn't have to be on the same server) the host is playing.</p>
+</li>
 </ul>
-<p>If any of the above don't answer your question or address your issue, check the <a href="https://github.com/samcm/synclounge/issues">Issue Tracker</a> and <a href="https://discord.gg/fKQB3yt">Discord</a> to see if your issue has been reported already. If not, let us know!</p>
+<p>If any of the above don't answer your question or address your issue, see the How-to: <a href="http://localhost:8000/how-tos/report_an_issue/">Report an Issue</a> page.</p>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
 <ul>
 <li>

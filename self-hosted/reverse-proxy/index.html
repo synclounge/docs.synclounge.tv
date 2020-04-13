@@ -456,6 +456,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-tos/report_an_issue/" title="Report an Issue" class="md-nav__link">
+      Report an Issue
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -956,6 +968,7 @@
                 <h1 id="reverse-proxy">Reverse Proxy<a class="headerlink" href="#reverse-proxy" title="Permanent link">&para;</a></h1>
 <p>If you want to host SyncLounge on your own domain and not having to give out your IP address, you will want to use a reverse proxy.
 There are many different options such as nginx, haproxy, traefik, etc.</p>
+<p>The following assume that you are running SyncLounge with default settings. If you have changed any of the default settings, like the port or root, you will want to modify the configurations provided here accordingly.</p>
 <h2 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
 <p>If you are using the <a href="https://hub.docker.com/r/linuxserver/letsencrypt">Let's Encrypt container by LinuxServer.io (LSIO)</a>, you can use the provided configs found in <a href="https://github.com/linuxserver/reverse-proxy-confs">LSIO's reverse proxy repo</a>.</p>
 <p>If you aren't using <a href="https://hub.docker.com/r/linuxserver/letsencrypt">LSIO's Let's Encrypt container</a>, the configurations found in <a href="https://github.com/linuxserver/reverse-proxy-confs">LSIO's reverse proxy repo</a> for <a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subdomain.conf.sample">subdomain</a> and <a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subfolder.conf.sample">subfolder</a> configurations will still be helpful.</p>
@@ -987,9 +1000,9 @@ ProxyPassReverse / http://&lt;IP&gt;:8088/
 <p>This was provided by <a href="https://github.com/LostSoulfly">LostSoulfly</a> in this <a href="https://github.com/samcm/synclounge/issues/174#issuecomment-609360096">comment</a>.</p>
 <pre><code class="conf">&lt;SUBDOMAIN.DOMAIN.TLD&gt; {
     gzip
-    log logs/slserver.access.log
+    log logs/synclounge.access.log
 
-    proxy / &lt;IP&gt;:8089 {
+    proxy / &lt;IP&gt;:8088 {
         except /socket.io
         except /slserver
         websocket

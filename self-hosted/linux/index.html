@@ -456,6 +456,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-tos/report_an_issue/" title="Report an Issue" class="md-nav__link">
+      Report an Issue
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1040,7 +1052,7 @@ Here's an example settings.json file:</p>
              &quot;name&quot;:&quot;Your Super Cool Plex Party Server&quot;,
              &quot;location&quot;:&quot;Space, the Final Frontier&quot;,
              &quot;url&quot;:&quot;http://synclounge.yourdomain.com/slserver&quot;,
-             &quot;logo&quot;:&quot;&quot;
+             &quot;image&quot;:&quot;&quot;
           }
        ],
        &quot;autoJoin&quot;:false,
@@ -1050,7 +1062,7 @@ Here's an example settings.json file:</p>
     }
 </code></pre>
 
-<p>I've made some opinionated assumptions for simplicity here, and again read the whole SyncLounge readme for more details, but the highlights are:</p>
+<p>I've made some opinionated assumptions for simplicity here, and again read the whole SyncLounge documentation for more details, but the highlights are:</p>
 <ul>
 <li><strong>accessUrl</strong> - Set this to the url you want synclounge to be at, and replace <code>http://synclounge.yourdomain.com</code> with that wherever you see it.</li>
 <li><strong>Server ports</strong>. These can be whatever you want. I've changed them from the default 8080 and 8081 since they're most commonly used. If you change these just keep them in mind when we do nginx/apache setup</li>
@@ -1092,7 +1104,7 @@ Access URL is http://synclounge.yourdomain.com
 <p>With whatever url and web port you set</p>
 <h2 id="web-server-setup">Web Server Setup<a class="headerlink" href="#web-server-setup" title="Permanent link">&para;</a></h2>
 <h3 id="nginx">NGINX<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
-<p>Here's a sample nginx site config (this is essentially the same as the one in the synclounge readme):</p>
+<p>Here's a sample nginx site config (this is essentially the same as the one in the synclounge documentation):</p>
 <pre><code class="conf">server {
   listen 80;
   server_name synclounge.yourdomain.com;
