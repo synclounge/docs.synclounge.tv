@@ -1,7 +1,9 @@
 
 # Documentation Guidelines
 
-Almost all of the pages in this documentation are written in markdown and conform to the [rules of markdownlint](https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md). If you contribute to the documentation, make sure that your edits pass linting which will automatically occur once you submit you changes.
+Almost all of the pages in this documentation are written in markdown and conform to the [rules of markdownlint](https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md). You can easily make edits to existing pages by clicking the Pencil icon to the right of the page's header.
+
+If you contribute to the documentation, make sure that your edits pass linting which will automatically occur once you submit you changes.
 
 When creating documentation, please try to do the following:
 
