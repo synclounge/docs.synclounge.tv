@@ -13,13 +13,17 @@ hide_nav_right: true
 
     SyncLounge uses your Plex account to fetch details about your Plex Clients and Media Servers to use within the app. For security concerns, see the 'Security' section below.
 
+- _Do the other users in my room need access to my Plex Server?_
+
+    No. The user just needs to have access to the same media the host is playing but it doesn't have to be on the same Plex Server.
+
 - _How do I do X when using SyncLounge?_
 
     If you are trying to figure out how to do something when *using* SyncLounge, check the [how-to](/how-tos/how-tos/) section of the documentation. This will show you how to change hosts, user Party Pausing, etc.
 
     If you are trying to figure out how to do something when *running* SyncLounge, check the [how-to](/how-tos/how-tos/) and [Self-hosting](/self-hosted/getting-started/) sections. This will tell you how to setup and configure your servers.
 
-## Issues
+## Common Issues
 
 - _I can't log in to SyncLounge_
 
@@ -44,11 +48,17 @@ hide_nav_right: true
       - **AppleTV**: Make sure that it is open before trying to connect.
       - **SmartTV**: Plex apps on SmartTVs don't work.
 
-- _Someone in my room is getting "the quota has been exceeded" error_
+- _Someone in my room is getting "the quota has been exceeded"_
+- _The SyncLounge player is continually buffering_
+- _I'm getting the message `Failed to execute 'appendBuffer' on 'SourceBuffer': The SourceBuffer is full, and cannot free space to append additional buffers.`
 
     Lower the bitrate (aka streaming quality) on the client.
 
-If any of the above don't answer your question or address your issue, check the [Issue Tracker](https://github.com/samcm/synclounge/issues) and [Discord](https://discord.gg/fKQB3yt) to see if your issue has been reported already. If not, let us know!
+- _Someone in my room is getting "Failed to find a compatible copy of `<MEDIA_NAME>`. If you have access to the content try manually playing it."_
+
+    SyncLounge is unable to retrieve information for the currently selected media on the server the user has access to. The user needs to make sure they have access to the same media (doesn't have to be on the same server) the host is playing.
+
+If any of the above don't answer your question or address your issue, see the How-to: [Report an Issue](http://localhost:8000/how-tos/report_an_issue/) page.
 
 ## Security
 
