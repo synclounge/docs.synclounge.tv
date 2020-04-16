@@ -15,7 +15,7 @@ hide_nav_right: true
 
 - _Do the other users in my room need access to my Plex Server?_
 
-    No. The user just needs to have access to the same media the host is playing but it doesn't have to be on the same Plex Server.
+    You don't have to share your Plex server if they have access to the same media on their own or another Plex server. If they don't have access to a Plex server with the same media, you will need to share your Plex server with them.
 
 - _How do I do X when using SyncLounge?_
 
@@ -56,7 +56,7 @@ hide_nav_right: true
 
 - _Someone in my room is getting "Failed to find a compatible copy of `<MEDIA_NAME>`. If you have access to the content try manually playing it."_
 
-    SyncLounge is unable to retrieve information for the currently selected media on the server the user has access to. The user needs to make sure they have access to the same media (doesn't have to be on the same server) the host is playing.
+    SyncLounge is unable to retrieve information for the currently selected media on the server the user has access to. This is usually caused by the user not having access to the media that the host is playing. See _Do the other users in my room need access to my Plex Server?_ for more information.
 
 If any of the above don't answer your question or address your issue, see the How-to: [Report an Issue](http://localhost:8000/how-tos/report_an_issue/) page.
 
