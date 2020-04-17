@@ -58,7 +58,7 @@ hide_nav_right: true
 
     SyncLounge is unable to retrieve information for the currently selected media on the server the user has access to. This is usually caused by the user not having access to the media that the host is playing. See _Do the other users in my room need access to my Plex Server?_ for more information.
 
-If any of the above don't answer your question or address your issue, see the How-to: [Report an Issue](http://localhost:8000/how-tos/report_an_issue/) page.
+If any of the above don't answer your question or address your issue, see the How-to: [Report an Issue](/how-tos/report_an_issue/) page.
 
 ## Security
 
