@@ -17,6 +17,28 @@ hide_nav_right: true
 
     You don't have to share your Plex server if they have access to the same media on their own or another Plex server. If they don't have access to a Plex server with the same media, you will need to share your Plex server with them.
 
+- _What clients are supported?_
+
+    SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly. Below are the supported clients and some known issues and solutions, where possible. If a solution doesn't work, an update probably broke its compatibility.
+
+      - If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the [hosted Synclounge does](http://app.synclounge.tv/) then try that to see if it will work.
+      - **Plex Media Player**: The original [Plex Media Player](https://forums.plex.tv/t/plex-media-player/120475/100) for Windows and MacOS is, as of writing this, still supported. Follow the link and scroll down to the newest to download.
+      - **Plex Desktop app**: You may encounter issues using this. Try the original Plex Media Player application above for better results.
+      - **New Plex Player**: If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.
+      - **Android based players (Roku, Android TV, Fire TV, etc.)**: These players can't remote start media properly. Some have had success starting the media and pausing it, then having the host start the media.
+      - **AppleTV**: Plex must be open before trying to connect.
+      - **Plex Home Theater**
+      - **OpenPHT**
+      - **Rasplex**
+      - **iOS (iPhone & iPad)**
+
+    Unsupported or Broken:
+
+      - **Smart TVs**
+      - **Plex Web Player (Chrome/Safari/Firefox)**
+      - **Xbox**
+      - **Playstation**
+
 - _How do I do X when using SyncLounge?_
 
     If you are trying to figure out how to do something when *using* SyncLounge, check the [how-to](/how-tos/how-tos/) section of the documentation. This will show you how to change hosts, user Party Pausing, etc.
@@ -27,7 +49,11 @@ hide_nav_right: true
 
 - _I can't log in to SyncLounge_
 
-    This is most likely due to Popup Blocking. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site.
+    This is most likely due to Popup Blocking or an Adblocker. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site. If you get a new window with the Plex logo, but nothing else happens, make sure that you don't have an AdBlocker or other plugin that is interfering with Plex completing the OAuth request.
+
+- _My client isn't working!_
+
+    See _What clients are supported?_ for information.
 
 - _When trying to connect to my server, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled._
 
@@ -37,28 +63,21 @@ hide_nav_right: true
       - The server owner's firewall, network configuration, ISP, or some other software is blocking the connection.
       - Remote access is not enabled on the server or it isn't working properly. To enable remote access or to check if remote access is enabled succesfully, see the [Plex's Remote Access article](https://support.plex.tv/articles/200289506-remote-access/)
 
-- _Client X isn't working!_
-
-    SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly. Here are some known issues and solutions, where possible:
-
-      - If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the [hosted Synclounge does](http://app.synclounge.tv/) then try that to see if it will work.
-      - **Plex Desktop app**: You may encounter issues using this. Try the original [Plex Media Player application](https://forums.plex.tv/t/plex-media-player/120475/100) for Windows and MacOS. Scroll down to the newest to download.
-      - **New Plex Player**: If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.
-      - **Android based players**: These players can't remote start media properly.
-      - **AppleTV**: Make sure that it is open before trying to connect.
-      - **SmartTV**: Plex apps on SmartTVs don't work.
-
 - _Someone in my room is getting "the quota has been exceeded"_
 - _The SyncLounge player is continually buffering_
 - _I'm getting the message `Failed to execute 'appendBuffer' on 'SourceBuffer': The SourceBuffer is full, and cannot free space to append additional buffers.`
 
-    Lower the bitrate (aka streaming quality) on the client.
+    Lower the bitrate (aka streaming quality) on the client. If you are using the SyncLounge Player, you can do this by clicking the settings cog in the upper-right of the player.
+
+- _The media could not be loaded, either because the server or network failed or because the format is not supported_
+
+    Turn off force transcode by going to the menu in the top left > synclounge settings > force transcode
 
 - _Someone in my room is getting "Failed to find a compatible copy of `<MEDIA_NAME>`. If you have access to the content try manually playing it."_
 
     SyncLounge is unable to retrieve information for the currently selected media on the server the user has access to. This is usually caused by the user not having access to the media that the host is playing. See _Do the other users in my room need access to my Plex Server?_ for more information.
 
-If any of the above don't answer your question or address your issue, see the How-to: [Report an Issue](/how-tos/report_an_issue/) page.
+If any of the above don't answer your question or address your issue, see the How-to: [Report an Issue](/how-tos/report-an-issue/) page.
 
 ## Security
 

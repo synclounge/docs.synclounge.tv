@@ -16,7 +16,7 @@ All of the variables and what they do can be found on the [Settings](/self-hoste
 
 ## Issues
 
-If you encounter any issues setting up SyncLounge, see the [Report an Issue](/how-tos/report_an_issue/) page.
+If you encounter any issues setting up SyncLounge, see the [Report an Issue](/how-tos/report-an-issue/) page.
 
 ## Running
 

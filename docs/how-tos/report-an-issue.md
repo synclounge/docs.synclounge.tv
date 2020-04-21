@@ -10,7 +10,9 @@ If not:
 
 It is preferred that issues are reported on the [Issue Tracker](https://github.com/samcm/synclounge/issues) and then raise it on [Discord](https://discord.gg/fKQB3yt).
 
-When reporting an issues, please try to be as detailed as possible. If you aren't going to report the issue on the [Issue Tracker](https://github.com/samcm/synclounge/issues), copy/paste and complete the following in Discord:
+When reporting an issues, please try to be as detailed as possible. If needed, you can generate logs from your client device (player). Information can be found in the troubleshooting section of the How-tos.
+
+If you aren't going to report the issue on the [Issue Tracker](https://github.com/samcm/synclounge/issues), copy/paste and complete the following into the Issues channel in Discord:
 
 ```markdown
 **Web App**
