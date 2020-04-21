@@ -67,7 +67,7 @@ hide_nav_right: true
 - _The SyncLounge player is continually buffering_
 - _I'm getting the message `Failed to execute 'appendBuffer' on 'SourceBuffer': The SourceBuffer is full, and cannot free space to append additional buffers.`
 
-    Lower the bitrate (aka streaming quality) on the client.
+    Lower the bitrate (aka streaming quality) on the client. If you are using the SyncLounge Player, you can do this by clicking the settings cog in the upper-right of the player.
 
 - _The media could not be loaded, either because the server or network failed or because the format is not supported_
 
