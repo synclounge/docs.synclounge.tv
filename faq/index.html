@@ -455,18 +455,42 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../how-tos/report-an-issue/" title="Report an Issue" class="md-nav__link">
+      Report an Issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../self-hosted/getting-started/" title="Self-hosting" class="md-nav__link">
+      Self-hosting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
-    <label class="md-nav__link" for="nav-3-2">
+    <label class="md-nav__link" for="nav-3-4">
       Using the App
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Using the App" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
+      <label class="md-nav__title" for="nav-3-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -501,30 +525,6 @@
         
       </ul>
     </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../self-hosted/getting-started/" title="Self-hosting" class="md-nav__link">
-      Self-hosting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../how-tos/report_an_issue/" title="Report an Issue" class="md-nav__link">
-      Report an Issue
-    </a>
   </li>
 
         
@@ -903,6 +903,29 @@
 <p>You don't have to share your Plex server if they have access to the same media on their own or another Plex server. If they don't have access to a Plex server with the same media, you will need to share your Plex server with them.</p>
 </li>
 <li>
+<p><em>What clients are supported?</em></p>
+<p>SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly. Below are the supported clients and some known issues and solutions, where possible. If a solution doesn't work, an update probably broke its compatibility.</p>
+<ul>
+<li>If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the <a href="http://app.synclounge.tv/">hosted Synclounge does</a> then try that to see if it will work.</li>
+<li><strong>Plex Media Player</strong>: The original <a href="https://forums.plex.tv/t/plex-media-player/120475/100">Plex Media Player</a> for Windows and MacOS is, as of writing this, still supported. Follow the link and scroll down to the newest to download.</li>
+<li><strong>Plex Desktop app</strong>: You may encounter issues using this. Try the original Plex Media Player application above for better results.</li>
+<li><strong>New Plex Player</strong>: If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.</li>
+<li><strong>Android based players (Roku, Android TV, Fire TV, etc.)</strong>: These players can't remote start media properly. Some have had success starting the media and pausing it, then having the host start the media.</li>
+<li><strong>AppleTV</strong>: Plex must be open before trying to connect.</li>
+<li><strong>Plex Home Theater</strong></li>
+<li><strong>OpenPHT</strong></li>
+<li><strong>Rasplex</strong></li>
+<li><strong>iOS (iPhone &amp; iPad)</strong></li>
+</ul>
+<p>Unsupported or Broken:</p>
+<ul>
+<li><strong>Smart TVs</strong></li>
+<li><strong>Plex Web Player (Chrome/Safari/Firefox)</strong></li>
+<li><strong>Xbox</strong></li>
+<li><strong>Playstation</strong></li>
+</ul>
+</li>
+<li>
 <p><em>How do I do X when using SyncLounge?</em></p>
 <p>If you are trying to figure out how to do something when <em>using</em> SyncLounge, check the <a href="/how-tos/how-tos/">how-to</a> section of the documentation. This will show you how to change hosts, user Party Pausing, etc.</p>
 <p>If you are trying to figure out how to do something when <em>running</em> SyncLounge, check the <a href="/how-tos/how-tos/">how-to</a> and <a href="/self-hosted/getting-started/">Self-hosting</a> sections. This will tell you how to setup and configure your servers.</p>
@@ -912,7 +935,11 @@
 <ul>
 <li>
 <p><em>I can't log in to SyncLounge</em></p>
-<p>This is most likely due to Popup Blocking. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site.</p>
+<p>This is most likely due to Popup Blocking or an Adblocker. If you press the "Click me" button and nothing happens, make sure that your browser isn't blocking popups for the site. If you get a new window with the Plex logo, but nothing else happens, make sure that you don't have an AdBlocker or other plugin that is interfering with Plex completing the OAuth request.</p>
+</li>
+<li>
+<p><em>My client isn't working!</em></p>
+<p>See <em>What clients are supported?</em> for information.</p>
 </li>
 <li>
 <p><em>When trying to connect to my server, "Unable to connect" "Try disabling your adblocker" appears even though there is no adblocker or it has been disabled.</em></p>
@@ -924,31 +951,23 @@
 </ul>
 </li>
 <li>
-<p><em>Client X isn't working!</em></p>
-<p>SyncLounge tries to maintain support as many clients as possible. However, changes to implementation on Plex's or the client's side can cause them to no longer work properly. Here are some known issues and solutions, where possible:</p>
-<ul>
-<li>If the site is running using SSL (HTTPS), due to the way some of the Plex clients have been made they can only operate using HTTP. If the site allows for HTTP use, like the <a href="http://app.synclounge.tv/">hosted Synclounge does</a> then try that to see if it will work.</li>
-<li><strong>Plex Desktop app</strong>: You may encounter issues using this. Try the original <a href="https://forums.plex.tv/t/plex-media-player/120475/100">Plex Media Player application</a> for Windows and MacOS. Scroll down to the newest to download.</li>
-<li><strong>New Plex Player</strong>: If you are using the new Plex Player, Plex changed the way it operates. Try changing back to the "old player" and see if it works.</li>
-<li><strong>Android based players</strong>: These players can't remote start media properly.</li>
-<li><strong>AppleTV</strong>: Make sure that it is open before trying to connect.</li>
-<li><strong>SmartTV</strong>: Plex apps on SmartTVs don't work.</li>
-</ul>
-</li>
-<li>
 <p><em>Someone in my room is getting "the quota has been exceeded"</em></p>
 </li>
 <li><em>The SyncLounge player is continually buffering</em></li>
 <li>
 <p>_I'm getting the message <code>Failed to execute 'appendBuffer' on 'SourceBuffer': The SourceBuffer is full, and cannot free space to append additional buffers.</code></p>
-<p>Lower the bitrate (aka streaming quality) on the client.</p>
+<p>Lower the bitrate (aka streaming quality) on the client. If you are using the SyncLounge Player, you can do this by clicking the settings cog in the upper-right of the player.</p>
+</li>
+<li>
+<p><em>The media could not be loaded, either because the server or network failed or because the format is not supported</em></p>
+<p>Turn off force transcode by going to the menu in the top left &gt; synclounge settings &gt; force transcode</p>
 </li>
 <li>
 <p><em>Someone in my room is getting "Failed to find a compatible copy of <code>&lt;MEDIA_NAME&gt;</code>. If you have access to the content try manually playing it."</em></p>
 <p>SyncLounge is unable to retrieve information for the currently selected media on the server the user has access to. This is usually caused by the user not having access to the media that the host is playing. See <em>Do the other users in my room need access to my Plex Server?</em> for more information.</p>
 </li>
 </ul>
-<p>If any of the above don't answer your question or address your issue, see the How-to: <a href="/how-tos/report_an_issue/">Report an Issue</a> page.</p>
+<p>If any of the above don't answer your question or address your issue, see the How-to: <a href="/how-tos/report-an-issue/">Report an Issue</a> page.</p>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
