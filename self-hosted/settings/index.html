@@ -624,6 +624,19 @@
     Authentication
   </a>
   
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-your-plex-servers-machine-identifier" class="md-nav__link">
+    Get your Plex Server's Machine Identifier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -883,6 +896,19 @@
     Authentication
   </a>
   
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-your-plex-servers-machine-identifier" class="md-nav__link">
+    Get your Plex Server's Machine Identifier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1029,11 +1055,24 @@
 
 <ul>
 <li><code>mechanism</code> specifies how SyncLounge should authenticate a user. This is mostly for future-proofing to allow other authentication mechanisms to be provided. Defaults to <code>none</code>.</li>
-<li><code>type</code> is mechanism dependent. Since <code>plex</code> is the only one currently, either or both <code>server</code> and <code>user</code> can be specified.</li>
-<li><code>server</code> checks against the plex server machine ID (<code>PLEX_SERVER_MACHINE_ID</code>). If the user has access to a server matching any of the IDs in the <code>authorized</code> list, they will be granted access. See the "You’ll Need Your Token" and "Base Server Capabilities" in <a href="https://support.plex.tv/articles/201638786-plex-media-server-url-commands/">Plex's "Plex Media Server URL Commands" Article</a> to get the <code>machineIdentifier</code> for your server. You can also use <code>https://plex.tv/pms/servers.xml?includeHttps=1&amp;X-Plex-Token=YourTokenGoesHere</code> to get the machine identifiers for any of the servers your account has access to.</li>
+<li><code>type</code> is mechanism dependent. Since <code>plex</code> is the only one currently, either or both <code>server</code> and <code>user</code> can be specified.<ul>
+<li><code>server</code> checks against the plex server machine identifier (<code>PLEX_SERVER_MACHINE_ID</code>). If the user has access to a server matching any of the IDs in the <code>authorized</code> list, they will be granted access. See "Get your Plex Server's Machine Identifier" below for details.</li>
 <li><code>user</code> checks against the user's email (<code>PLEX_USER_EMAIL</code>) or username (<code>PLEX_USER_NAME</code>). If either matches a value in the <code>authorized</code> list, they will be granted access.</li>
+</ul>
+</li>
 <li><code>authorized</code> is a list of information for who is authorized.</li>
 </ul>
+<h3 id="get-your-plex-servers-machine-identifier">Get your Plex Server's Machine Identifier<a class="headerlink" href="#get-your-plex-servers-machine-identifier" title="Permanent link">&para;</a></h3>
+<p>To get the Plex Server's Machine Identifier (<code>machineIdentifier</code>) for your server you will need to get your Plex Authentication Token and put this into your browser:</p>
+<p><code>https://plex.tv/pms/servers.xml?includeHttps=1&amp;X-Plex-Token=YourTokenGoesHere</code>.</p>
+<p>You should then see something like this:</p>
+<pre><code class="xml">&lt;MediaContainer friendlyName=&quot;myPlex&quot; identifier=&quot;com.plexapp.plugins.myplex&quot; machineIdentifier=&quot;IGNORE THIS&quot; size=&quot;1&quot;&gt;
+  &lt;Server accessToken=&quot;X&quot; name=&quot;SERVER NAME&quot; address=&quot;X&quot; port=&quot;X&quot; version=&quot;X&quot; scheme=&quot;http&quot; host=&quot;X&quot; localAddresses=&quot;X&quot; machineIdentifier=&quot;PLEX_SERVER_MACHINE_ID&quot; createdAt=&quot;X&quot; updatedAt=&quot;X&quot; owned=&quot;1&quot; synced=&quot;0&quot;/&gt;
+&lt;/MediaContainer&gt;
+</code></pre>
+
+<p>In the entry that starts with <code>&lt;Server</code> find the one that matches your server name and then find the <code>machineIdentifier</code> attribute.</p>
+<p>If you can't get the above to work, you can get the value from your server by opening <code>config/Library/Application Support/Plex Media Server/Preferences.xml</code> and grabbing the <code>ProcessedMachineIdentifier</code> value found there.</p>
 <h2 id="customize-the-server-list">Customize the server list<a class="headerlink" href="#customize-the-server-list" title="Permanent link">&para;</a></h2>
 <h2 id="server-object">Server object<a class="headerlink" href="#server-object" title="Permanent link">&para;</a></h2>
 <p>The servers list can be modified with your own entry for just the Custom Server in the servers list or for the entire list of servers.</p>
