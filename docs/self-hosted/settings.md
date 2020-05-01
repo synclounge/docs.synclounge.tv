@@ -45,7 +45,7 @@ To enable authentication, the following setting and format is used
 
 ### Get your Plex Server's Machine Identifier
 
-To get the Plex Server's Machine Identifier (`machineIdentifier`) for your server you will need to get your Plex Authentication Token and put this into your browser:
+To get the Plex Server's Machine Identifier (`machineIdentifier`) for your server you will need to [get your Plex Authentication Token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/) and put this into your browser, replacing `YourTokenGoesHere` with your token:
 
 `https://plex.tv/pms/servers.xml?includeHttps=1&X-Plex-Token=YourTokenGoesHere`.
 
@@ -63,7 +63,7 @@ If you can't get the above to work, you can get the value from your server by op
 
 ## Customize the server list
 
-## Server object
+### Server object
 
 The servers list can be modified with your own entry for just the Custom Server in the servers list or for the entire list of servers.
 
