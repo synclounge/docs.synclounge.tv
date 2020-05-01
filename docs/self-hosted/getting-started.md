@@ -22,9 +22,7 @@ If you encounter any issues setting up SyncLounge, see the [Report an Issue](/ho
 
 ### Docker
 
-The recommended way of running SyncLounge is by using [Docker](/self-hosted/docker/). Docker is an application that runs software in containers making it easier to get applications running. You can learn more by going to [Docker's website](https://www.docker.com/).
-
-If you are running linux, check out [DockSTARTer](https://dockstarter.com/)! DockSTARTer's main goal is to make it quick and easy to get up and running with Docker.
+The recommended way of self-hosting SyncLounge is [Running with Docker](/self-hosted/docker/). Docker is an application that runs software in containers making it easier to get applications running. You can learn more by going to [Docker's website](https://www.docker.com/).
 
 ### Locally
 
