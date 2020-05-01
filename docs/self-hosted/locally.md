@@ -3,6 +3,7 @@
 
 ## Requirements
 
+- Git
 - Node v8.4.0+
 
 ## First steps
