@@ -644,15 +644,15 @@
     Customize the server list
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Customize the server list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#server-object" class="md-nav__link">
     Server object
   </a>
   
-    <nav class="md-nav" aria-label="Server object">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#customize-the-custom-server-entry" class="md-nav__link">
@@ -916,15 +916,15 @@
     Customize the server list
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Customize the server list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#server-object" class="md-nav__link">
     Server object
   </a>
   
-    <nav class="md-nav" aria-label="Server object">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#customize-the-custom-server-entry" class="md-nav__link">
@@ -1063,7 +1063,7 @@
 <li><code>authorized</code> is a list of information for who is authorized.</li>
 </ul>
 <h3 id="get-your-plex-servers-machine-identifier">Get your Plex Server's Machine Identifier<a class="headerlink" href="#get-your-plex-servers-machine-identifier" title="Permanent link">&para;</a></h3>
-<p>To get the Plex Server's Machine Identifier (<code>machineIdentifier</code>) for your server you will need to get your Plex Authentication Token and put this into your browser:</p>
+<p>To get the Plex Server's Machine Identifier (<code>machineIdentifier</code>) for your server you will need to <a href="https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/">get your Plex Authentication Token</a> and put this into your browser, replacing <code>YourTokenGoesHere</code> with your token:</p>
 <p><code>https://plex.tv/pms/servers.xml?includeHttps=1&amp;X-Plex-Token=YourTokenGoesHere</code>.</p>
 <p>You should then see something like this:</p>
 <pre><code class="xml">&lt;MediaContainer friendlyName=&quot;myPlex&quot; identifier=&quot;com.plexapp.plugins.myplex&quot; machineIdentifier=&quot;IGNORE THIS&quot; size=&quot;1&quot;&gt;
@@ -1074,7 +1074,7 @@
 <p>In the entry that starts with <code>&lt;Server</code> find the one that matches your server name and then find the <code>machineIdentifier</code> attribute.</p>
 <p>If you can't get the above to work, you can get the value from your server by opening <code>config/Library/Application Support/Plex Media Server/Preferences.xml</code> and grabbing the <code>ProcessedMachineIdentifier</code> value found there.</p>
 <h2 id="customize-the-server-list">Customize the server list<a class="headerlink" href="#customize-the-server-list" title="Permanent link">&para;</a></h2>
-<h2 id="server-object">Server object<a class="headerlink" href="#server-object" title="Permanent link">&para;</a></h2>
+<h3 id="server-object">Server object<a class="headerlink" href="#server-object" title="Permanent link">&para;</a></h3>
 <p>The servers list can be modified with your own entry for just the Custom Server in the servers list or for the entire list of servers.</p>
 <p>The full server object looks like this:</p>
 <pre><code class="json">{
