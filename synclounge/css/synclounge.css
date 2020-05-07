@@ -32,6 +32,7 @@ a {
 .md-typeset h4, h4,
 .md-typeset h5, h5 {
   color: #ffc107;
+  text-transform: none;
 }
 
 .md-typeset .md-content__button,
