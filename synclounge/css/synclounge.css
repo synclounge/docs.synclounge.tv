@@ -69,6 +69,10 @@ a {
   background-color: hsla(0,0%,50.5%,.5);
   box-shadow: 0.29412em 0 0 hsla(0,0%,50.5%,.5), -0.29412em 0 0 hsla(0,0%,50.5%,.5);
   color: #ffc107;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* Fix nav title position */
