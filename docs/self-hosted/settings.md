@@ -1,8 +1,19 @@
 # Settings
 
-The following can be used to change some of the settings in the application. Arguments are passed to the application by using `--<argument>=<value>` when running the application. ENV variables are mostly for Docker but can be set locally on your system.
+The following can be used to change some of the settings in the application via command-line arguments, environment variables (ENV), or the settings.json file.  
+Arguments are passed to the application by using `--<argument>=<value>` when running the application.  
+ENV variables are mostly for Docker but can be set locally on your system.
+The settings.json file is used by both the Server and Webapp.
 
 NOTE: Argument and ENV should be able to be used interchangeably. If you have issues with the ENV, use the argument value in its place.
+
+## Server
+
+| Argument | ENV | Description |
+| ------ | ------ | ------ |
+| servers | SERVERS | Set your own servers list. See below for more information.<br>Optional |
+| serverroot | SERVER_ROOT | Change the base URL of the server app.<br>Ex - `/server`.<br>Defaults to `/slserver` |
+| server_port | SERVER_PORT | Change the port the server app uses.<br>Defaults to `8089` |
 
 ## Webapp
 
@@ -131,11 +142,3 @@ The entire servers list can be modified with your own list of servers. If this s
 ```
 
 ![Custom Server List Example](https://user-images.githubusercontent.com/1524443/76433958-6daed600-638b-11ea-9cf6-41ea79182dbc.png)
-
-## Server
-
-| Argument | ENV | Description |
-| ------ | ------ | ------ |
-| servers | SERVERS | Set your own servers list. See below for more information.<br>Optional |
-| serverroot | SERVER_ROOT | Change the base URL of the server app.<br>Ex - `/server`.<br>Defaults to `/slserver` |
-| server_port | SERVER_PORT | Change the port the server app uses.<br>Defaults to `8089` |
