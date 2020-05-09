@@ -613,6 +613,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#webapp" class="md-nav__link">
     Webapp
   </a>
@@ -676,13 +683,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    Server
-  </a>
   
 </li>
       
@@ -898,6 +898,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#webapp" class="md-nav__link">
     Webapp
   </a>
@@ -964,13 +971,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    Server
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -992,8 +992,38 @@
                 
                 
                 <h1 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h1>
-<p>The following can be used to change some of the settings in the application. Arguments are passed to the application by using <code>--&lt;argument&gt;=&lt;value&gt;</code> when running the application. ENV variables are mostly for Docker but can be set locally on your system.</p>
+<p>The following can be used to change some of the settings in the application via command-line arguments, environment variables (ENV), or the settings.json file.<br />
+Arguments are passed to the application by using <code>--&lt;argument&gt;=&lt;value&gt;</code> when running the application.<br />
+ENV variables are mostly for Docker but can be set locally on your system.
+The settings.json file is used by both the Server and Webapp.</p>
 <p>NOTE: Argument and ENV should be able to be used interchangeably. If you have issues with the ENV, use the argument value in its place.</p>
+<h2 id="server">Server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>ENV</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>servers</td>
+<td>SERVERS</td>
+<td>Set your own servers list. See below for more information.<br>Optional</td>
+</tr>
+<tr>
+<td>serverroot</td>
+<td>SERVER_ROOT</td>
+<td>Change the base URL of the server app.<br>Ex - <code>/server</code>.<br>Defaults to <code>/slserver</code></td>
+</tr>
+<tr>
+<td>server_port</td>
+<td>SERVER_PORT</td>
+<td>Change the port the server app uses.<br>Defaults to <code>8089</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="webapp">Webapp<a class="headerlink" href="#webapp" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1184,33 +1214,6 @@
 </code></pre>
 
 <p><img alt="Custom Server List Example" src="https://user-images.githubusercontent.com/1524443/76433958-6daed600-638b-11ea-9cf6-41ea79182dbc.png" /></p>
-<h2 id="server">Server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-<th>ENV</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>servers</td>
-<td>SERVERS</td>
-<td>Set your own servers list. See below for more information.<br>Optional</td>
-</tr>
-<tr>
-<td>serverroot</td>
-<td>SERVER_ROOT</td>
-<td>Change the base URL of the server app.<br>Ex - <code>/server</code>.<br>Defaults to <code>/slserver</code></td>
-</tr>
-<tr>
-<td>server_port</td>
-<td>SERVER_PORT</td>
-<td>Change the port the server app uses.<br>Defaults to <code>8089</code></td>
-</tr>
-</tbody>
-</table>
                 
               
               
