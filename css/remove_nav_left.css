@@ -1,5 +1,7 @@
-.md-sidebar.md-sidebar--primary {
-    display: none;
+@media (min-width: 76.1875em) {
+    .md-sidebar.md-sidebar--primary {
+        display: none;
+    }
 }
 
 .md-content {
