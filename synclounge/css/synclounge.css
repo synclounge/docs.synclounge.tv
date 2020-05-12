@@ -97,7 +97,7 @@ a {
   border-color: #ffc107;
 }
 
-/* Fix mobile stylinf */
+/* Fix mobile styling */
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title,
   .md-nav--primary .md-nav__title~.md-nav__list {
