@@ -1,9 +1,21 @@
 
-# Docker
+# Running with Docker
 
-The official Docker container for SyncLounge can be found on [Docker Hub](https://hub.docker.com/r/starbix/synclounge) made by [Starbix](https://github.com/Starbix/)
+There are two containers for running SyncLounge using Docker: LinuxServer.io's container and Starbix's container.
 
-Note: If you have issues with the ENV variables in [Settings](/self-hosted/settings/), trying using the argument instead for the environment variable.
+## Linuxserver.io's container
+
+The Linuxserver.io container for SyncLounge is located at [https://hub.docker.com/r/linuxserver/synclounge](https://hub.docker.com/r/linuxserver/synclounge) and full documentation can be found there.
+
+If you are running linux, [DockSTARTer](https://dockstarter.com/) supports this container and makes it quick and easy to get up and running with Docker. [DockSTARTer SyncLounge documentation](https://dockstarter.com/apps/synclounge/) will help you get set up.
+
+Even if you aren't using DockSTARTer, there is some information under the [Advanced](https://dockstarter.com/apps/synclounge/#advanced) that may be useful.
+
+## Starbix's container
+
+The original Docker container for SyncLounge can be found on [Docker Hub](https://hub.docker.com/r/starbix/synclounge) made by [Starbix](https://github.com/Starbix/).
+
+Note: If you have issues with the ENV variables in [Settings](/self-hosted/settings/), trying using the argument syntax instead for the environment variable syntax. E.g. - `webroot` instead of `WEB_ROOT`
 
 The following tags are available:
 
@@ -33,12 +45,7 @@ docker run \
   starbix/synclounge:TAG
 ```
 
-## Docker on Linux with DockSTARTer
-
-If you are running linux, check out [DockSTARTer](https://dockstarter.com/)! DockSTARTer's main goal is to make it quick and easy to get up and running with Docker.
-
-DockSTARTer is in the process of [testing to include it with the configuration](https://github.com/GhostWriters/DockSTARTer/issues/818).  
-Until then, you can use [overrides](https://dockstarter.com/advanced/overrides/) to add SyncLounge. Here is a sample override file:
+If you are running [DockSTARTer](https://dockstarter.com/), you can run this container by using [overrides](https://dockstarter.com/advanced/overrides/) to add SyncLounge. Here is a sample override file:
 
 ```yaml
 version: "3.4"
