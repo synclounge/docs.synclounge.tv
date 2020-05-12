@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#running-with-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -553,8 +553,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker-on-linux-with-dockstarter" class="md-nav__link">
-    Docker on Linux with DockSTARTer
+  <a href="#linuxserverios-container" class="md-nav__link">
+    Linuxserver.io's container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starbixs-container" class="md-nav__link">
+    Starbix's container
   </a>
   
 </li>
@@ -831,8 +838,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker-on-linux-with-dockstarter" class="md-nav__link">
-    Docker on Linux with DockSTARTer
+  <a href="#linuxserverios-container" class="md-nav__link">
+    Linuxserver.io's container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starbixs-container" class="md-nav__link">
+    Starbix's container
   </a>
   
 </li>
@@ -857,9 +871,15 @@
                   
                 
                 
-                <h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
-<p>The official Docker container for SyncLounge can be found on <a href="https://hub.docker.com/r/starbix/synclounge">Docker Hub</a> made by <a href="https://github.com/Starbix/">Starbix</a></p>
-<p>Note: If you have issues with the ENV variables in <a href="/self-hosted/settings/">Settings</a>, trying using the argument instead for the environment variable.</p>
+                <h1 id="running-with-docker">Running with Docker<a class="headerlink" href="#running-with-docker" title="Permanent link">&para;</a></h1>
+<p>There are two containers for running SyncLounge using Docker: LinuxServer.io's container and Starbix's container.</p>
+<h2 id="linuxserverios-container">Linuxserver.io's container<a class="headerlink" href="#linuxserverios-container" title="Permanent link">&para;</a></h2>
+<p>The Linuxserver.io container for SyncLounge is located at <a href="https://hub.docker.com/r/linuxserver/synclounge">https://hub.docker.com/r/linuxserver/synclounge</a> and full documentation can be found there.</p>
+<p>If you are running linux, <a href="https://dockstarter.com/">DockSTARTer</a> supports this container and makes it quick and easy to get up and running with Docker. <a href="https://dockstarter.com/apps/synclounge/">DockSTARTer SyncLounge documentation</a> will help you get set up.</p>
+<p>Even if you aren't using DockSTARTer, there is some information under the <a href="https://dockstarter.com/apps/synclounge/#advanced">Advanced</a> that may be useful.</p>
+<h2 id="starbixs-container">Starbix's container<a class="headerlink" href="#starbixs-container" title="Permanent link">&para;</a></h2>
+<p>The original Docker container for SyncLounge can be found on <a href="https://hub.docker.com/r/starbix/synclounge">Docker Hub</a> made by <a href="https://github.com/Starbix/">Starbix</a>.</p>
+<p>Note: If you have issues with the ENV variables in <a href="/self-hosted/settings/">Settings</a>, trying using the argument syntax instead for the environment variable syntax. E.g. - <code>webroot</code> instead of <code>WEB_ROOT</code></p>
 <p>The following tags are available:</p>
 <ul>
 <li>latest / alpine: webapp and server based on alpine</li>
@@ -884,10 +904,7 @@
   starbix/synclounge:TAG
 </code></pre>
 
-<h2 id="docker-on-linux-with-dockstarter">Docker on Linux with DockSTARTer<a class="headerlink" href="#docker-on-linux-with-dockstarter" title="Permanent link">&para;</a></h2>
-<p>If you are running linux, check out <a href="https://dockstarter.com/">DockSTARTer</a>! DockSTARTer's main goal is to make it quick and easy to get up and running with Docker.</p>
-<p>DockSTARTer is in the process of <a href="https://github.com/GhostWriters/DockSTARTer/issues/818">testing to include it with the configuration</a>.<br />
-Until then, you can use <a href="https://dockstarter.com/advanced/overrides/">overrides</a> to add SyncLounge. Here is a sample override file:</p>
+<p>If you are running <a href="https://dockstarter.com/">DockSTARTer</a>, you can run this container by using <a href="https://dockstarter.com/advanced/overrides/">overrides</a> to add SyncLounge. Here is a sample override file:</p>
 <pre><code class="yaml">version: &quot;3.4&quot;
 services:
   synclounge:
