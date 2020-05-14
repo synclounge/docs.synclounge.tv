@@ -31,7 +31,7 @@ Also, due to the way some of the Plex clients have been made they can only opera
 
 #### Unsupported or Broken Clients
 
-- **AppleTV**: Plex must be open before trying to connect.
+- **AppleTV**: A recent update broken compatibility with SyncLounge
 - **Smart TVs**
 - **Plex Web Player (Chrome/Safari/Firefox)**
 - **Xbox**
