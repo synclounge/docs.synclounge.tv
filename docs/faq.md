@@ -24,7 +24,6 @@ Also, due to the way some of the Plex clients have been made they can only opera
 - **Plex Desktop app**: You may encounter issues using this. Try the original Plex Media Player application above for better results.
 - **New Plex Player**: If you are using the new Plex Player on a device, Plex changed the way it operates. Try changing back to the "old player" and see if it works better for you.
 - **Android based players (Roku, Android TV, Fire TV, etc.)**: These players can't remote start media properly. Some have had success starting the media and pausing it, then having the host start the media.
-- **AppleTV**: Plex must be open before trying to connect.
 - **Plex Home Theater**
 - **OpenPHT**
 - **Rasplex**
@@ -32,6 +31,7 @@ Also, due to the way some of the Plex clients have been made they can only opera
 
 #### Unsupported or Broken Clients
 
+- **AppleTV**: Plex must be open before trying to connect.
 - **Smart TVs**
 - **Plex Web Player (Chrome/Safari/Firefox)**
 - **Xbox**
