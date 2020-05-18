@@ -76,6 +76,21 @@ This was provided by [LostSoulfly](https://github.com/LostSoulfly) in this [comm
 }
 ```
 
+### Caddy 2 Subdomain
+
+```conf
+    <SUBDOMAIN.DOMAIN.TLD> {
+            encode gzip
+            log {
+                    output file <LOG_LOCATION>
+            }
+            route /slserver/* {
+                    reverse_proxy <IP>:8089
+            }
+            reverse_proxy <IP>:8088
+    }
+```
+
 ### Caddy Subfolder
 
 If you have a working subfolder created, please contribute!
