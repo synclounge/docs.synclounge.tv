@@ -602,7 +602,7 @@
       
         <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
-    Nginx
+    NGINX
   </a>
   
 </li>
@@ -643,6 +643,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#nginx-adapter-for-caddy" class="md-nav__link">
+    NGINX adapter for Caddy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#caddy-subdomain" class="md-nav__link">
     Caddy Subdomain
   </a>
@@ -650,9 +657,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#caddy-2-subdomain" class="md-nav__link">
-    Caddy 2 Subdomain
+  <a href="#caddy-v1" class="md-nav__link">
+    Caddy v1
   </a>
+  
+    <nav class="md-nav" aria-label="Caddy v1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caddy-v2" class="md-nav__link">
+    Caddy v2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -893,7 +913,7 @@
       
         <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
-    Nginx
+    NGINX
   </a>
   
 </li>
@@ -934,6 +954,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#nginx-adapter-for-caddy" class="md-nav__link">
+    NGINX adapter for Caddy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#caddy-subdomain" class="md-nav__link">
     Caddy Subdomain
   </a>
@@ -941,9 +968,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#caddy-2-subdomain" class="md-nav__link">
-    Caddy 2 Subdomain
+  <a href="#caddy-v1" class="md-nav__link">
+    Caddy v1
   </a>
+  
+    <nav class="md-nav" aria-label="Caddy v1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caddy-v2" class="md-nav__link">
+    Caddy v2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -983,7 +1023,7 @@
 <p>If you want to host SyncLounge on your own domain and not having to give out your IP address, you will want to use a reverse proxy.
 There are many different options such as nginx, haproxy, traefik, etc.</p>
 <p>The following assume that you are running SyncLounge with default settings. If you have changed any of the default settings, like the port or root, you will want to modify the configurations provided here accordingly.</p>
-<h2 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
+<h2 id="nginx">NGINX<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
 <p>If you are using the <a href="https://hub.docker.com/r/linuxserver/letsencrypt">Let's Encrypt container by LinuxServer.io (LSIO)</a>, you can use the provided configs found in <a href="https://github.com/linuxserver/reverse-proxy-confs">LSIO's reverse proxy repo</a>.</p>
 <p>If you aren't using <a href="https://hub.docker.com/r/linuxserver/letsencrypt">LSIO's Let's Encrypt container</a>, the configurations found in <a href="https://github.com/linuxserver/reverse-proxy-confs">LSIO's reverse proxy repo</a> for <a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subdomain.conf.sample">subdomain</a> and <a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subfolder.conf.sample">subfolder</a> configurations will still be helpful.</p>
 <p><strong>NOTES:</strong></p>
@@ -1008,9 +1048,12 @@ ProxyPassReverse / http://&lt;IP&gt;:8088/
 </code></pre>
 
 <h3 id="apache-subfolder">Apache Subfolder<a class="headerlink" href="#apache-subfolder" title="Permanent link">&para;</a></h3>
-<p>If you have a working subfolder created, please contribute!</p>
+<p>If you have a working subfolder created, please <a href="/contributing/documentation-guidelines/">contribute</a>!</p>
 <h2 id="caddy">Caddy<a class="headerlink" href="#caddy" title="Permanent link">&para;</a></h2>
+<h3 id="nginx-adapter-for-caddy">NGINX adapter for Caddy<a class="headerlink" href="#nginx-adapter-for-caddy" title="Permanent link">&para;</a></h3>
+<p>You can use NGINX config files with Caddy with Caddy's <a href="https://github.com/caddyserver/nginx-adapter">NGINX adapter</a>. While it is currently still in development, it should work pretty well with the NGINX files provided above.</p>
 <h3 id="caddy-subdomain">Caddy Subdomain<a class="headerlink" href="#caddy-subdomain" title="Permanent link">&para;</a></h3>
+<h3 id="caddy-v1">Caddy v1<a class="headerlink" href="#caddy-v1" title="Permanent link">&para;</a></h3>
 <p>This was provided by <a href="https://github.com/LostSoulfly">LostSoulfly</a> in this <a href="https://github.com/samcm/synclounge/issues/174#issuecomment-609360096">comment</a>.</p>
 <pre><code class="conf">&lt;SUBDOMAIN.DOMAIN.TLD&gt; {
     gzip
@@ -1041,7 +1084,7 @@ ProxyPassReverse / http://&lt;IP&gt;:8088/
 }
 </code></pre>
 
-<h3 id="caddy-2-subdomain">Caddy 2 Subdomain<a class="headerlink" href="#caddy-2-subdomain" title="Permanent link">&para;</a></h3>
+<h4 id="caddy-v2">Caddy v2<a class="headerlink" href="#caddy-v2" title="Permanent link">&para;</a></h4>
 <pre><code class="conf">    &lt;SUBDOMAIN.DOMAIN.TLD&gt; {
             encode gzip
             log {
@@ -1055,7 +1098,7 @@ ProxyPassReverse / http://&lt;IP&gt;:8088/
 </code></pre>
 
 <h3 id="caddy-subfolder">Caddy Subfolder<a class="headerlink" href="#caddy-subfolder" title="Permanent link">&para;</a></h3>
-<p>If you have a working subfolder created, please contribute!</p>
+<p>If you have a working subfolder created, please <a href="/contributing/documentation-guidelines/">contribute</a>!</p>
                 
               
               
