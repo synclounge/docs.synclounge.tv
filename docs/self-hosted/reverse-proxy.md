@@ -5,7 +5,7 @@ There are many different options such as nginx, haproxy, traefik, etc.
 
 The following assume that you are running SyncLounge with default settings. If you have changed any of the default settings, like the port or root, you will want to modify the configurations provided here accordingly.
 
-## Nginx
+## NGINX
 
 If you are using the [Let's Encrypt container by LinuxServer.io (LSIO)](https://hub.docker.com/r/linuxserver/letsencrypt), you can use the provided configs found in [LSIO's reverse proxy repo](https://github.com/linuxserver/reverse-proxy-confs).
 
@@ -38,11 +38,17 @@ ProxyPassReverse / http://<IP>:8088/
 
 ### Apache Subfolder
 
-If you have a working subfolder created, please contribute!
+If you have a working subfolder created, please [contribute](/contributing/documentation-guidelines/)!
 
 ## Caddy
 
+### NGINX adapter for Caddy
+
+You can use NGINX config files with Caddy with Caddy's [NGINX adapter](https://github.com/caddyserver/nginx-adapter). While it is currently still in development, it should work pretty well with the NGINX files provided above.
+
 ### Caddy Subdomain
+
+### Caddy v1
 
 This was provided by [LostSoulfly](https://github.com/LostSoulfly) in this [comment](https://github.com/samcm/synclounge/issues/174#issuecomment-609360096).
 
@@ -76,7 +82,7 @@ This was provided by [LostSoulfly](https://github.com/LostSoulfly) in this [comm
 }
 ```
 
-### Caddy 2 Subdomain
+#### Caddy v2
 
 ```conf
     <SUBDOMAIN.DOMAIN.TLD> {
@@ -93,4 +99,4 @@ This was provided by [LostSoulfly](https://github.com/LostSoulfly) in this [comm
 
 ### Caddy Subfolder
 
-If you have a working subfolder created, please contribute!
+If you have a working subfolder created, please [contribute](/contributing/documentation-guidelines/)!
