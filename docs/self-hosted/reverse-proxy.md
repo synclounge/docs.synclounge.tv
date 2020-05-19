@@ -84,6 +84,8 @@ This was provided by [LostSoulfly](https://github.com/LostSoulfly) in this [comm
 
 #### Caddy v2
 
+This was contributed by [mresnick](https://github.com/mresnick) via a [Pull Request](https://github.com/MagicalCodeMonkey/docs.synclounge.tv/pull/28)
+
 ```conf
     <SUBDOMAIN.DOMAIN.TLD> {
             encode gzip
