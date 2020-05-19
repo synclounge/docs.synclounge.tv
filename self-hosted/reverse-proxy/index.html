@@ -650,6 +650,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#caddy-2-subdomain" class="md-nav__link">
+    Caddy 2 Subdomain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#caddy-subfolder" class="md-nav__link">
     Caddy Subfolder
   </a>
@@ -934,6 +941,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#caddy-2-subdomain" class="md-nav__link">
+    Caddy 2 Subdomain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#caddy-subfolder" class="md-nav__link">
     Caddy Subfolder
   </a>
@@ -1025,6 +1039,19 @@ ProxyPassReverse / http://&lt;IP&gt;:8088/
         transparent
     }
 }
+</code></pre>
+
+<h3 id="caddy-2-subdomain">Caddy 2 Subdomain<a class="headerlink" href="#caddy-2-subdomain" title="Permanent link">&para;</a></h3>
+<pre><code class="conf">    &lt;SUBDOMAIN.DOMAIN.TLD&gt; {
+            encode gzip
+            log {
+                    output file &lt;LOG_LOCATION&gt;
+            }
+            route /slserver/* {
+                    reverse_proxy &lt;IP&gt;:8089
+            }
+            reverse_proxy &lt;IP&gt;:8088
+    }
 </code></pre>
 
 <h3 id="caddy-subfolder">Caddy Subfolder<a class="headerlink" href="#caddy-subfolder" title="Permanent link">&para;</a></h3>
