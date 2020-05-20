@@ -3,15 +3,41 @@
 
 There are two containers for running SyncLounge using Docker: LinuxServer.io's container and Starbix's container.
 
-## LinuxServer.io's container
+## LinuxServer.io container
 
 The LinuxServer.io container for SyncLounge is located at [https://hub.docker.com/r/linuxserver/synclounge](https://hub.docker.com/r/linuxserver/synclounge) and full documentation can be found there.
 
 If you are running linux, [DockSTARTer](https://dockstarter.com/) supports this container and makes it quick and easy to get up and running with Docker. [DockSTARTer SyncLounge documentation](https://dockstarter.com/apps/synclounge/) will help you get set up.
 
-Even if you aren't using DockSTARTer, there is some information under the [Advanced](https://dockstarter.com/apps/synclounge/#advanced) that may be useful.
+### Advanced
 
-## Starbix's container
+#### Override Servers List
+
+If you want to override the Servers List you'll need to create and mount your servers file.
+
+1. Create a folder to hold you configurations. EX - `~/docker_configs/SyncLounge/`
+1. Create a file called `servers.json` in your SyncLounge config folder and [populate it with servers](http://docs.synclounge.tv/self-hosted/settings/#customize-the-entire-list).
+
+    Note: Your servers.json file should NOT include `"servers":` prefix (that is for the settings file which isn't used here). Only `[]` and the server objects inside should be included.
+
+1. Add or update your container's volume mounts according to the below examples.
+
+Docker command-line:
+
+```bash
+-v <PATH_TO_SYNCLOUNGE_CONFIG_FOLDER>/servers.json:/defaults/servers.json
+```
+
+Docker compose:
+
+```yaml
+services:
+  synclounge:
+    volumes:
+        - <PATH_TO_SYNCLOUNGE_CONFIG_FOLDER>/servers.json:/defaults/servers.json
+```
+
+## Starbix container
 
 The original Docker container for SyncLounge can be found on [Docker Hub](https://hub.docker.com/r/starbix/synclounge) made by [Starbix](https://github.com/Starbix/).
 
