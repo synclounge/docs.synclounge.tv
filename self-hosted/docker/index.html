@@ -553,15 +553,41 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linuxserverios-container" class="md-nav__link">
-    LinuxServer.io's container
+  <a href="#linuxserverio-container" class="md-nav__link">
+    LinuxServer.io container
   </a>
+  
+    <nav class="md-nav" aria-label="LinuxServer.io container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#override-servers-list" class="md-nav__link">
+    Override Servers List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#starbixs-container" class="md-nav__link">
-    Starbix's container
+  <a href="#starbix-container" class="md-nav__link">
+    Starbix container
   </a>
   
 </li>
@@ -838,15 +864,41 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linuxserverios-container" class="md-nav__link">
-    LinuxServer.io's container
+  <a href="#linuxserverio-container" class="md-nav__link">
+    LinuxServer.io container
   </a>
+  
+    <nav class="md-nav" aria-label="LinuxServer.io container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#override-servers-list" class="md-nav__link">
+    Override Servers List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#starbixs-container" class="md-nav__link">
-    Starbix's container
+  <a href="#starbix-container" class="md-nav__link">
+    Starbix container
   </a>
   
 </li>
@@ -873,11 +925,34 @@
                 
                 <h1 id="running-with-docker">Running with Docker<a class="headerlink" href="#running-with-docker" title="Permanent link">&para;</a></h1>
 <p>There are two containers for running SyncLounge using Docker: LinuxServer.io's container and Starbix's container.</p>
-<h2 id="linuxserverios-container">LinuxServer.io's container<a class="headerlink" href="#linuxserverios-container" title="Permanent link">&para;</a></h2>
+<h2 id="linuxserverio-container">LinuxServer.io container<a class="headerlink" href="#linuxserverio-container" title="Permanent link">&para;</a></h2>
 <p>The LinuxServer.io container for SyncLounge is located at <a href="https://hub.docker.com/r/linuxserver/synclounge">https://hub.docker.com/r/linuxserver/synclounge</a> and full documentation can be found there.</p>
 <p>If you are running linux, <a href="https://dockstarter.com/">DockSTARTer</a> supports this container and makes it quick and easy to get up and running with Docker. <a href="https://dockstarter.com/apps/synclounge/">DockSTARTer SyncLounge documentation</a> will help you get set up.</p>
-<p>Even if you aren't using DockSTARTer, there is some information under the <a href="https://dockstarter.com/apps/synclounge/#advanced">Advanced</a> that may be useful.</p>
-<h2 id="starbixs-container">Starbix's container<a class="headerlink" href="#starbixs-container" title="Permanent link">&para;</a></h2>
+<h3 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h3>
+<h4 id="override-servers-list">Override Servers List<a class="headerlink" href="#override-servers-list" title="Permanent link">&para;</a></h4>
+<p>If you want to override the Servers List you'll need to create and mount your servers file.</p>
+<ol>
+<li>Create a folder to hold you configurations. EX - <code>~/docker_configs/SyncLounge/</code></li>
+<li>
+<p>Create a file called <code>servers.json</code> in your SyncLounge config folder and <a href="http://docs.synclounge.tv/self-hosted/settings/#customize-the-entire-list">populate it with servers</a>.</p>
+<p>Note: Your servers.json file should NOT include <code>"servers":</code> prefix (that is for the settings file which isn't used here). Only <code>[]</code> and the server objects inside should be included.</p>
+</li>
+<li>
+<p>Add or update your container's volume mounts according to the below examples.</p>
+</li>
+</ol>
+<p>Docker command-line:</p>
+<pre><code class="bash">-v &lt;PATH_TO_SYNCLOUNGE_CONFIG_FOLDER&gt;/servers.json:/defaults/servers.json
+</code></pre>
+
+<p>Docker compose:</p>
+<pre><code class="yaml">services:
+  synclounge:
+    volumes:
+        - &lt;PATH_TO_SYNCLOUNGE_CONFIG_FOLDER&gt;/servers.json:/defaults/servers.json
+</code></pre>
+
+<h2 id="starbix-container">Starbix container<a class="headerlink" href="#starbix-container" title="Permanent link">&para;</a></h2>
 <p>The original Docker container for SyncLounge can be found on <a href="https://hub.docker.com/r/starbix/synclounge">Docker Hub</a> made by <a href="https://github.com/Starbix/">Starbix</a>.</p>
 <p>Note: If you have issues with the ENV variables in <a href="/self-hosted/settings/">Settings</a>, trying using the argument syntax instead for the environment variable syntax. E.g. - <code>webroot</code> instead of <code>WEB_ROOT</code></p>
 <p>The following tags are available:</p>
