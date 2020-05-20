@@ -3,9 +3,9 @@
 
 There are two containers for running SyncLounge using Docker: LinuxServer.io's container and Starbix's container.
 
-## Linuxserver.io's container
+## LinuxServer.io's container
 
-The Linuxserver.io container for SyncLounge is located at [https://hub.docker.com/r/linuxserver/synclounge](https://hub.docker.com/r/linuxserver/synclounge) and full documentation can be found there.
+The LinuxServer.io container for SyncLounge is located at [https://hub.docker.com/r/linuxserver/synclounge](https://hub.docker.com/r/linuxserver/synclounge) and full documentation can be found there.
 
 If you are running linux, [DockSTARTer](https://dockstarter.com/) supports this container and makes it quick and easy to get up and running with Docker. [DockSTARTer SyncLounge documentation](https://dockstarter.com/apps/synclounge/) will help you get set up.
 
