@@ -21,9 +21,9 @@ NOTE: Argument and ENV should be able to be used interchangeably. If you have is
 | ------ | ------ | ------ |
 | webroot | WEB_ROOT | Change the base URL of the web app.<br>Ex - `/lounge` |
 | webapp_port | WEB_PORT | Change the port the web app uses.<br>Defaults to `8088` |
-| accessUrl | WEB_ACCESSURL | Set the URL the web app uses for things like invites.<br>Examples:<br>`http://IP:8088`<br>`http://mysynclounge.com`<br>If `webroot` is set<br>`http://IP:8088/<webroot>`<br>`http://mysynclounge.com/<webroot>` |
+| accessUrl | WEB_ACCESSURL | Set the URL the web app uses for things like invites.<br>Examples:<br>`http(s)://IP:8088`<br>`http(s)://mysynclounge.com`<br>If `webroot` is set<br>`http(s)://IP:8088/<webroot>`<br>`http(s)://mysynclounge.com/<webroot>` |
 | autoJoin | AUTOJOIN_ENABLED | Set to `true` to enable auto joining.<br>Defaults to `false` |
-| autoJoinServer | AUTOJOIN_SERVERURL | Set this to the server URL you want the user to auto join.<br>Required if auto join is enabled.<br>Ex - `http://mysynclounge.com/slserver` |
+| autoJoinServer | AUTOJOIN_SERVERURL | Set this to the server URL you want the user to auto join.<br>Required if auto join is enabled.<br>Examples:<br>`http(s)://IP:8089/slsever`<br>`http(s)://mysynclounge.com/slsever`<br>If `serveroot` or `server_port` are set<br>`http(s)://IP:SERVER_PORT/<serverroot>`<br>`http(s)://mysynclounge.com/<serverroot>` |
 | autoJoinRoom | AUTOJOIN_ROOM | Set this to the room name in the server that you want the users to auto join.<br>Optional |
 | autoJoinPassword | AUTOJOIN_PASSWORD | Set this to the room's password, if it has one.<br>Optional |
 | authentication | AUTHENTICATION | Configure authentication for the server. See below for more information.<br>Optional |
