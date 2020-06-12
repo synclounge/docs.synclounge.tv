@@ -992,10 +992,10 @@
                 
                 
                 <h1 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h1>
-<p>The following can be used to change some of the settings in the application via command-line arguments, environment variables (ENV), or the settings.json file.<br />
+<p>The following can be used to change some of the settings in the application via command-line arguments, environment variables (ENV), or the <code>settings.json</code> file.<br />
 Arguments are passed to the application by using <code>--&lt;argument&gt;=&lt;value&gt;</code> when running the application.<br />
 ENV variables are mostly for Docker but can be set locally on your system.
-The settings.json file is used by both the Server and Webapp.</p>
+The <code>settings.json</code> file, found in the root of your SyncLounge folder, is used by both the Server and Webapp. When modifying this file, you should make sure that it is valid by using something like <a href="https://jsonlint.com/">JSONLint</a>.</p>
 <p>NOTE: Argument and ENV should be able to be used interchangeably. If you have issues with the ENV, use the argument value in its place.</p>
 <h2 id="server">Server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h2>
 <table>
