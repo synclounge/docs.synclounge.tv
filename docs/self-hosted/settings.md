@@ -1,9 +1,9 @@
 # Settings
 
-The following can be used to change some of the settings in the application via command-line arguments, environment variables (ENV), or the settings.json file.  
+The following can be used to change some of the settings in the application via command-line arguments, environment variables (ENV), or the `settings.json` file.  
 Arguments are passed to the application by using `--<argument>=<value>` when running the application.  
 ENV variables are mostly for Docker but can be set locally on your system.
-The settings.json file is used by both the Server and Webapp.
+The `settings.json` file, found in the root of your SyncLounge folder, is used by both the Server and Webapp. When modifying this file, you should make sure that it is valid by using something like [JSONLint](https://jsonlint.com/).
 
 NOTE: Argument and ENV should be able to be used interchangeably. If you have issues with the ENV, use the argument value in its place.
 
