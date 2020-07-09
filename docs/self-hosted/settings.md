@@ -81,7 +81,7 @@ The full server object looks like this:
     "name": "",
     "location": "",
     "url": "",
-    "image": "",
+    "logo": "",
     "defaultRoom": "",
     "defaultPassword": ""
   }
@@ -105,7 +105,7 @@ The Custom Server entry can be modified by adding this to your settings. This ta
   "name": "Custom Server 1",
   "location": "Custom Location",
   "url": "https://mycustomserver.com/slserver",
-  "image": "https://mycustomserver.com/logo.png"
+  "logo": "https://mycustomserver.com/logo.png"
 }
 ```
 
@@ -121,20 +121,20 @@ The entire servers list can be modified with your own list of servers. If this s
     "name": "Custom Server 1",
     "location": "Custom Location",
     "url": "https://1.mycustomserver.com/slserver",
-    "image": "https://mycustomserver.com/logo.png"
+    "logo": "https://mycustomserver.com/logo.png"
   },
   {
     "name": "Custom Server 2",
     "location": "Custom Location",
     "url": "https://2.mycustomserver.com/slserver",
-    "image": "https://mycustomserver.com/logo-2.png",
+    "logo": "https://mycustomserver.com/logo-2.png",
     "defaultRoom": "DefaultRoom"
   },
   {
     "name": "Custom Server 3",
     "location": "Custom Location",
     "url": "https://3.mycustomserver.com/slserver",
-    "image": "https://mycustomserver.com/logo-3.png",
+    "logo": "https://mycustomserver.com/logo-3.png",
     "defaultRoom": "DefaultRoom",
     "defaultPassword": "DefaultPassword123"
   }
