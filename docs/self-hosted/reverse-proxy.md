@@ -7,9 +7,9 @@ The following assume that you are running SyncLounge with default settings. If y
 
 ## NGINX
 
-If you are using the [Let's Encrypt container by LinuxServer.io (LSIO)](https://hub.docker.com/r/linuxserver/letsencrypt), you can use the provided configs found in [LSIO's reverse proxy repo](https://github.com/linuxserver/reverse-proxy-confs).
+If you are using the [Secure Web Application Gateway (SWAG) container by LinuxServer.io (LSIO)](https://hub.docker.com/r/linuxserver/swag), you can use the provided configs found in [LSIO's reverse proxy repo](https://github.com/linuxserver/reverse-proxy-confs).
 
-If you aren't using [LSIO's Let's Encrypt container](https://hub.docker.com/r/linuxserver/letsencrypt), the configurations found in [LSIO's reverse proxy repo](https://github.com/linuxserver/reverse-proxy-confs) for [subdomain](https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subdomain.conf.sample) and [subfolder](https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subfolder.conf.sample) configurations will still be helpful.
+If you aren't using [LSIO's SWAG container](https://hub.docker.com/r/linuxserver/swag), the configurations found in [LSIO's reverse proxy repo](https://github.com/linuxserver/reverse-proxy-confs) for [subdomain](https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subdomain.conf.sample) and [subfolder](https://github.com/linuxserver/reverse-proxy-confs/blob/master/synclounge.subfolder.conf.sample) configurations will still be helpful.
 
 **NOTES:**
 
